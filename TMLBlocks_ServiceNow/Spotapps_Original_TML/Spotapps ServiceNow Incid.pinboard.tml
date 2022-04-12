@@ -1,0 +1,959 @@
+guid: 512acd41-fdce-4b2e-9fec-1ca7fbb0e93d
+pinboard:
+  name: Spotapps ServiceNow Incident Management
+  visualizations:
+  - id: Viz_1
+    answer:
+      name: Incidents Created Last Month
+      description: No of Incidents Opened in Last Month
+      tables:
+      - id: Spotapps_Servicenow_Incident_Managment
+        name: Spotapps_Servicenow_Incident_Managment
+      search_query: "[Task Opened Date] [Task Opened Date].monthly [Task Opened Date].'last month' [Task Classification].incident [Task Classification].incident_task count [Task Number]"
+      answer_columns:
+      - name: Task Opened Date
+      - name: Number of Task Number
+      - name: Task Classification
+      - name: Month(Task Opened Date)
+      table:
+        table_columns:
+        - column_id: Month(Task Opened Date)
+          headline_aggregation: MIN-MAX
+        - column_id: Number of Task Number
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Month(Task Opened Date)
+        - Number of Task Number
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"widthState\": [{\"columnId\": \"Month(Task Opened Date)\",\"width\": 298.0}],\"wrapTableHeader\": true}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Month(Task Opened Date)
+        - column_id: Number of Task Number
+        axis_configs:
+        - x:
+          - Month(Task Opened Date)
+          y:
+          - Number of Task Number
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT1\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {}},\"axisProperties\": [{\"id\": \"c1fb66bc-4f7d-42aa-82e0-95b4c9e89c67\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Task Number\"],\"isOpposite\": false}},{\"id\": \"26eb7a5b-78c4-467f-871f-6ce895301dfe\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(Task Opened Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Number of Task Number\",\"color\": \"#2E75F0\"}]}"
+      display_mode: TABLE_MODE
+    display_headline_column: Number of Task Number
+  - id: Viz_2
+    answer:
+      name: Incidents Created This Month
+      description: Total No of Incidents Created in this Month
+      tables:
+      - id: Spotapps_Servicenow_Incident_Managment
+        name: Spotapps_Servicenow_Incident_Managment
+      search_query: "[Task Opened Date] [Task Opened Date].monthly [Task Opened Date].'this month' [Task Classification].incident [Task Classification].incident_task count [Task Number]"
+      answer_columns:
+      - name: Number of Task Number
+      - name: Task Classification
+      - name: Month(Task Opened Date)
+      - name: Task Opened Date
+      table:
+        table_columns:
+        - column_id: Month(Task Opened Date)
+          headline_aggregation: MIN-MAX
+        - column_id: Number of Task Number
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Month(Task Opened Date)
+        - Number of Task Number
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"widthState\": [{\"columnId\": \"Month(Task Opened Date)\",\"width\": 298.0}],\"wrapTableHeader\": true}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Month(Task Opened Date)
+        - column_id: Number of Task Number
+        axis_configs:
+        - x:
+          - Month(Task Opened Date)
+          y:
+          - Number of Task Number
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT1\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {}},\"axisProperties\": [{\"id\": \"c1fb66bc-4f7d-42aa-82e0-95b4c9e89c67\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Task Number\"],\"isOpposite\": false}},{\"id\": \"26eb7a5b-78c4-467f-871f-6ce895301dfe\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(Task Opened Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Number of Task Number\",\"color\": \"#2E75F0\"}]}"
+      display_mode: TABLE_MODE
+    display_headline_column: Number of Task Number
+  - id: Viz_3
+    answer:
+      name: Incidents Closed Last Month
+      description: Total No of Incidents Closed in Last Month
+      tables:
+      - id: Spotapps_Servicenow_Incident_Managment
+        name: Spotapps_Servicenow_Incident_Managment
+      search_query: "[Task Closed Date] [Task Closed Date].monthly [Task Closed Date].'last month' [Task Classification].incident [Task Classification].incident_task count [Task Number]"
+      answer_columns:
+      - name: Task Closed Date
+      - name: Number of Task Number
+      - name: Task Classification
+      - name: Month(Task Closed Date)
+      table:
+        table_columns:
+        - column_id: Month(Task Closed Date)
+          headline_aggregation: MIN-MAX
+        - column_id: Number of Task Number
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Month(Task Closed Date)
+        - Number of Task Number
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"widthState\": [{\"columnId\": \"9e160504-c3d7-48aa-bf71-3043f8ec72fc\",\"width\": 298.0}],\"wrapTableHeader\": true,\"theme\": \"ROW\"}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Month(Task Closed Date)
+        - column_id: Number of Task Number
+        axis_configs:
+        - x:
+          - Month(Task Closed Date)
+          y:
+          - Number of Task Number
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT1\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {}},\"axisProperties\": [{\"id\": \"b894a6b2-d874-490f-a551-13ef579b1eb1\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Task Number\"],\"isOpposite\": false}},{\"id\": \"5685fe74-0333-4f8f-aa65-403e2ce410db\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(Task Closed Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Number of Task Number\",\"color\": \"#2E75F0\"}]}"
+      display_mode: TABLE_MODE
+    display_headline_column: Number of Task Number
+  - id: Viz_4
+    answer:
+      name: Incidents Closed This Month
+      description: Total No of Incidents  Closed in this Month
+      tables:
+      - id: Spotapps_Servicenow_Incident_Managment
+        name: Spotapps_Servicenow_Incident_Managment
+      search_query: "[Task Closed Date] [Task Closed Date].monthly [Task Closed Date].'this month' [Task Classification].incident [Task Classification].incident_task count [Task Number]"
+      answer_columns:
+      - name: Task Closed Date
+      - name: Number of Task Number
+      - name: Task Classification
+      - name: Month(Task Closed Date)
+      table:
+        table_columns:
+        - column_id: Month(Task Closed Date)
+          headline_aggregation: MIN-MAX
+        - column_id: Number of Task Number
+          headline_aggregation: SUM
+        ordered_column_ids:
+        - Month(Task Closed Date)
+        - Number of Task Number
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"widthState\": [{\"columnId\": \"9e160504-c3d7-48aa-bf71-3043f8ec72fc\",\"width\": 298.0}],\"wrapTableHeader\": true,\"theme\": \"ROW\"}"
+      chart:
+        type: LINE
+        chart_columns:
+        - column_id: Month(Task Closed Date)
+        - column_id: Number of Task Number
+        axis_configs:
+        - x:
+          - Month(Task Closed Date)
+          y:
+          - Number of Task Number
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT1\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {}},\"axisProperties\": [{\"id\": \"b894a6b2-d874-490f-a551-13ef579b1eb1\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Task Number\"],\"isOpposite\": false}},{\"id\": \"5685fe74-0333-4f8f-aa65-403e2ce410db\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(Task Closed Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Number of Task Number\",\"color\": \"#2E75F0\"}]}"
+      display_mode: TABLE_MODE
+    display_headline_column: Number of Task Number
+  - id: Viz_5
+    answer:
+      name: Incidents Opened Weekly (Last 12 weeks) by Category
+      description: Count of Opened Incidents basing upon the Incident Category for the past 12 weeks
+      tables:
+      - id: Spotapps_Servicenow_Incident_Managment
+        name: Spotapps_Servicenow_Incident_Managment
+      search_query: "[Task Opened Date] [Task Opened Date].weekly [Task Opened Date].'last 12 weeks' [Incident Category] count [Task Number] [Task Classification].incident_task [Incident Category] != '{null}'"
+      answer_columns:
+      - name: Number of Task Number
+      - name: Week(Task Opened Date)
+      - name: Task Classification
+      - name: Incident Category
+      - name: Task Opened Date
+      table:
+        table_columns:
+        - column_id: Week(Task Opened Date)
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Incident Category
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Number of Task Number
+          headline_aggregation: AVERAGE
+        ordered_column_ids:
+        - Week(Task Opened Date)
+        - Incident Category
+        - Number of Task Number
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"widthState\": [{\"columnId\": \"Week(Task Opened Date)\",\"width\": 231.0}],\"wrapTableHeader\": true}"
+      chart:
+        type: STACKED_COLUMN
+        chart_columns:
+        - column_id: Week(Task Opened Date)
+        - column_id: Incident Category
+        - column_id: Number of Task Number
+        axis_configs:
+        - x:
+          - Week(Task Opened Date)
+          y:
+          - Number of Task Number
+          color:
+          - Incident Category
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT1\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"Number of Task Number\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"883b5b14-ec30-4dcd-9085-a75d4331cc9c\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Task Number\"],\"isOpposite\": false}},{\"id\": \"4c4ff38e-6a9c-42a0-8a6d-8b1d5f8da3c3\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Week(Task Opened Date)\"]}}],\"seriesColors\": [{\"serieName\": \"database\",\"color\": \"#06BF7F\"},{\"serieName\": \"hardware\",\"color\": \"#FCC838\"},{\"serieName\": \"inquiry\",\"color\": \"#48D1E0\"},{\"serieName\": \"software\",\"color\": \"#C26232\"},{\"serieName\": \"network\",\"color\": \"#B6313E\"}],\"systemSeriesColors\": [{\"serieName\": \"database\",\"color\": \"#06BF7F\"},{\"serieName\": \"hardware\",\"color\": \"#FCC838\"},{\"serieName\": \"inquiry\",\"color\": \"#48D1E0\"},{\"serieName\": \"software\",\"color\": \"#C26232\"},{\"serieName\": \"network\",\"color\": \"#B6313E\"},{\"serieName\": \"{null}\",\"color\": \"#82DFE9\"}]}"
+      display_mode: CHART_MODE
+  - id: Viz_6
+    answer:
+      name: Incidents Closed Weekly (Last 12 weeks) by Category
+      description: Count of Closed Incidents basing upon the Incident Category for the past 12 weeks
+      tables:
+      - id: Spotapps_Servicenow_Incident_Managment
+        name: Spotapps_Servicenow_Incident_Managment
+      search_query: "[Task Closed Date] [Task Closed Date].weekly [Task Closed Date].'last 12 weeks' [Incident Category] count [Task Number] [Task Classification].incident_task [Incident Category] != '{null}'"
+      answer_columns:
+      - name: Week(Task Closed Date)
+      - name: Task Closed Date
+      - name: Number of Task Number
+      - name: Task Classification
+      - name: Incident Category
+      table:
+        table_columns:
+        - column_id: Week(Task Closed Date)
+          headline_aggregation: MIN-MAX
+        - column_id: Incident Category
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Number of Task Number
+          headline_aggregation: AVERAGE
+        ordered_column_ids:
+        - Week(Task Closed Date)
+        - Incident Category
+        - Number of Task Number
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"widthState\": [{\"columnId\": \"81bd1f78-64ce-48b7-a3df-3c71c5ebef84\",\"width\": 231.0}],\"wrapTableHeader\": true}"
+      chart:
+        type: STACKED_COLUMN
+        chart_columns:
+        - column_id: Week(Task Closed Date)
+        - column_id: Incident Category
+        - column_id: Number of Task Number
+        axis_configs:
+        - x:
+          - Week(Task Closed Date)
+          y:
+          - Number of Task Number
+          color:
+          - Incident Category
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT1\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"Number of Task Number\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"23ed8491-01fa-4e6a-a782-43f4cf310a45\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Task Number\"],\"isOpposite\": false}},{\"id\": \"2345ddea-05eb-4ee7-8ae9-d052d990d581\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Week(Task Closed Date)\"]}}],\"seriesColors\": [{\"serieName\": \"database\",\"color\": \"#06BF7F\"},{\"serieName\": \"hardware\",\"color\": \"#FCC838\"},{\"serieName\": \"inquiry\",\"color\": \"#48D1E0\"},{\"serieName\": \"software\",\"color\": \"#C26232\"},{\"serieName\": \"network\",\"color\": \"#B6313E\"}],\"systemSeriesColors\": [{\"serieName\": \"database\",\"color\": \"#06BF7F\"},{\"serieName\": \"hardware\",\"color\": \"#FCC838\"},{\"serieName\": \"inquiry\",\"color\": \"#48D1E0\"},{\"serieName\": \"software\",\"color\": \"#C26232\"},{\"serieName\": \"network\",\"color\": \"#B6313E\"},{\"serieName\": \"{null}\",\"color\": \"#82DFE9\"}]}"
+      display_mode: CHART_MODE
+  - id: Viz_7
+    answer:
+      name: Incidents by Incident Category
+      description: Overall count of incidents based upon category till date
+      tables:
+      - id: Spotapps_Servicenow_Incident_Managment
+        name: Spotapps_Servicenow_Incident_Managment
+      search_query: "[Incident Category] [Task Classification].incident_task [Incident Category] != '{null}' count [Task Number]"
+      answer_columns:
+      - name: Task Classification
+      - name: Incident Category
+      - name: Number of Task Number
+      table:
+        table_columns:
+        - column_id: Incident Category
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Number of Task Number
+          headline_aggregation: AVERAGE
+        ordered_column_ids:
+        - Incident Category
+        - Number of Task Number
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true}"
+      chart:
+        type: PIE
+        chart_columns:
+        - column_id: Incident Category
+        - column_id: Number of Task Number
+        axis_configs:
+        - x:
+          - Incident Category
+          y:
+          - Number of Task Number
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT1\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"Number of Task Number\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"1cfd82c7-057c-44dd-b27c-6b3fd9f27216\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Task Number\"],\"isOpposite\": false}},{\"id\": \"81c5ad08-b9af-4fd2-b3b2-bada42d2c960\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Incident Category\"]}}],\"seriesColors\": [{\"serieName\": \"Number of Task Number\",\"color\": \"#2E75F0\"},{\"serieName\": \"database\",\"color\": \"#06BF7F\"},{\"serieName\": \"hardware\",\"color\": \"#FCC838\"},{\"serieName\": \"inquiry\",\"color\": \"#48D1E0\"},{\"serieName\": \"network\",\"color\": \"#B6313E\"},{\"serieName\": \"software\",\"color\": \"#C26232\"}],\"systemSeriesColors\": [{\"serieName\": \"Number of Task Number\",\"color\": \"#2E75F0\"},{\"serieName\": \"database\",\"color\": \"#06BF7F\"},{\"serieName\": \"hardware\",\"color\": \"#FCC838\"},{\"serieName\": \"inquiry\",\"color\": \"#48D1E0\"},{\"serieName\": \"network\",\"color\": \"#71A1F4\"},{\"serieName\": \"software\",\"color\": \"#2E75F0\"}]}"
+      display_mode: CHART_MODE
+  - id: Viz_8
+    answer:
+      name: Incidents Closed by User Country by Incident Category
+      description: Closed incidents count for each user country and for different incidents category
+      tables:
+      - id: Spotapps_Servicenow_Incident_Managment
+        name: Spotapps_Servicenow_Incident_Managment
+      search_query: "[Incident Category] [Task Closed Date] [Task Closed Date].monthly [Country] [Task Classification].incident_task [Country] != '{null}' count [Task Number] [Incident Category] != '{null}' [Country] != 'usa' sort by count [Task Number] descending"
+      answer_columns:
+      - name: Month(Task Closed Date)
+      - name: Country
+      - name: Number of Task Number
+      - name: Incident Category
+      - name: Task Classification
+      table:
+        table_columns:
+        - column_id: Incident Category
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Month(Task Closed Date)
+          headline_aggregation: MIN-MAX
+        - column_id: Country
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Number of Task Number
+          headline_aggregation: AVERAGE
+        ordered_column_ids:
+        - Incident Category
+        - Month(Task Closed Date)
+        - Country
+        - Number of Task Number
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true}"
+      chart:
+        type: SANKEY
+        chart_columns:
+        - column_id: Incident Category
+        - column_id: Month(Task Closed Date)
+        - column_id: Country
+        - column_id: Number of Task Number
+        axis_configs:
+        - x:
+          - Incident Category
+          - Country
+          y:
+          - Number of Task Number
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT1\",\"chartProperties\": {\"chartSpecific\": {}},\"axisProperties\": [{\"id\": \"fda75113-42c5-4775-90ba-4a34a72b81d3\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Task Number\"],\"isOpposite\": false}},{\"id\": \"910efefc-5324-46dd-937c-b281f561e025\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Incident Category\",\"Country\"]}}]}"
+      display_mode: CHART_MODE
+  - id: Viz_9
+    answer:
+      name: Incidents Created by User Group (last 12 weeks)
+      description: Different user groups assigned  while creating the incident in the last 12 weeks
+      tables:
+      - id: Spotapps_Servicenow_Incident_Managment
+        name: Spotapps_Servicenow_Incident_Managment
+      search_query: "[Task Opened Date] [Task Opened Date].weekly [Task Opened Date].'last 12 weeks' [User Group Name] count [Task Number] > 0 [User Group Name] != '{null}' [Task Classification] = 'incident_task' [User Group Name].'application development' [User Group Name].'business application registration approval group' [User Group Name].'cab approval' [User Group Name].'capacity mgmt' [User Group Name].database [User Group Name].hardware [User Group Name].'incident management' [User Group Name].network"
+      answer_columns:
+      - name: User Group Name
+      - name: Task Classification
+      - name: Week(Task Opened Date)
+      - name: Task Opened Date
+      - name: Number of Task Number
+      table:
+        table_columns:
+        - column_id: Week(Task Opened Date)
+          headline_aggregation: MIN-MAX
+        - column_id: User Group Name
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Number of Task Number
+          headline_aggregation: AVERAGE
+        ordered_column_ids:
+        - Week(Task Opened Date)
+        - User Group Name
+        - Number of Task Number
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true}"
+      chart:
+        type: STACKED_AREA
+        chart_columns:
+        - column_id: Week(Task Opened Date)
+        - column_id: User Group Name
+        - column_id: Number of Task Number
+        axis_configs:
+        - x:
+          - Week(Task Opened Date)
+          y:
+          - Number of Task Number
+          color:
+          - User Group Name
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT1\",\"chartProperties\": {\"gridLines\": {\"xGridlineEnabled\": false,\"yGridlineEnabled\": false},\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"Number of Task Number\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"f7043a1d-a283-4b42-9cc6-d0850e18f6ca\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Task Number\"],\"isOpposite\": false}},{\"id\": \"d56fb9e6-6272-4db7-9d9f-3ccb25d7a1ba\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Week(Task Opened Date)\"]}}],\"seriesColors\": [{\"serieName\": \"atf service level management  group\",\"color\": \"#721F27\"},{\"serieName\": \"atf_testgroup_network\",\"color\": \"#F47E89\"},{\"serieName\": \"atf_testgroup_servicedesk\",\"color\": \"#B6313E\"},{\"serieName\": \"analytics settings managers\",\"color\": \"#F9B3B9\"},{\"serieName\": \"app engine studio users\",\"color\": \"#F04152\"},{\"serieName\": \"catalog request approvers > $1000\",\"color\": \"#747E8C\"},{\"serieName\": \"catalog request approvers for sales\",\"color\": \"#7A3D1F\"},{\"serieName\": \"change management\",\"color\": \"#FFA97E\"},{\"serieName\": \"database atlanta\",\"color\": \"#FFCCB3\"},{\"serieName\": \"database san diego\",\"color\": \"#FF8142\"},{\"serieName\": \"field services\",\"color\": \"#422E75\"},{\"serieName\": \"help desk\",\"color\": \"#6A4ABA\"},{\"serieName\": \"it finance cab\",\"color\": \"#D1C0FB\"},{\"serieName\": \"it securities\",\"color\": \"#8C62F5\"},{\"serieName\": \"itsm engineering\",\"color\": \"#025B3C\"},{\"serieName\": \"ldap admins\",\"color\": \"#049160\"},{\"serieName\": \"mobile analytics settings managers\",\"color\": \"#9BE5CB\"},{\"serieName\": \"ny db\",\"color\": \"#06BF7F\"},{\"serieName\": \"network cab managers\",\"color\": \"#FCD977\"},{\"serieName\": \"nimsoft desk\",\"color\": \"#BF982A\"},{\"serieName\": \"openspace\",\"color\": \"#FDE9AF\"},{\"serieName\": \"problem analyzers\",\"color\": \"#FCC838\"},{\"serieName\": \"problem solving\",\"color\": \"#22636B\"},{\"serieName\": \"procurement\",\"color\": \"#82DFE9\"},{\"serieName\": \"project mgmt\",\"color\": \"#369FAA\"},{\"serieName\": \"rma approvers\",\"color\": \"#B5ECF2\"},{\"serieName\": \"recommendation admin\",\"color\": \"#48D1E0\"},{\"serieName\": \"service desk\",\"color\": \"#163772\"},{\"serieName\": \"software\",\"color\": \"#71A1F4\"},{\"serieName\": \"survey creators\",\"color\": \"#2359B6\"},{\"serieName\": \"team development code reviewers\",\"color\": \"#ABC7F9\"},{\"serieName\": \"us presidents group 1\",\"color\": \"#2E75F0\"},{\"serieName\": \"us presidents group 2\",\"color\": \"#721F27\"},{\"serieName\": \"ecab approval\",\"color\": \"#F47E89\"},{\"serieName\": \"application development\",\"color\": \"#F04152\"},{\"serieName\": \"business application registration approval group\",\"color\": \"#8C62F5\"},{\"serieName\": \"cab approval\",\"color\": \"#2E75F0\"},{\"serieName\": \"capacity mgmt\",\"color\": \"#48D1E0\"},{\"serieName\": \"database\",\"color\": \"#FCC838\"},{\"serieName\": \"hardware\",\"color\": \"#747E8C\"},{\"serieName\": \"incident management\",\"color\": \"#06BF7F\"},{\"serieName\": \"network\",\"color\": \"#FF8142\"}],\"systemSeriesColors\": [{\"serieName\": \"atf service level management  group\",\"color\": \"#721F27\"},{\"serieName\": \"atf_testgroup_network\",\"color\": \"#F47E89\"},{\"serieName\": \"atf_testgroup_servicedesk\",\"color\": \"#B6313E\"},{\"serieName\": \"analytics settings managers\",\"color\": \"#F9B3B9\"},{\"serieName\": \"app engine studio users\",\"color\": \"#F04152\"},{\"serieName\": \"application development\",\"color\": \"#2F3947\"},{\"serieName\": \"business application registration approval group\",\"color\": \"#A2ACBA\"},{\"serieName\": \"cab approval\",\"color\": \"#47515F\"},{\"serieName\": \"capacity mgmt\",\"color\": \"#BEC6D0\"},{\"serieName\": \"catalog request approvers > $1000\",\"color\": \"#747E8C\"},{\"serieName\": \"catalog request approvers for sales\",\"color\": \"#7A3D1F\"},{\"serieName\": \"change management\",\"color\": \"#FFA97E\"},{\"serieName\": \"database\",\"color\": \"#C26232\"},{\"serieName\": \"database atlanta\",\"color\": \"#FFCCB3\"},{\"serieName\": \"database san diego\",\"color\": \"#FF8142\"},{\"serieName\": \"field services\",\"color\": \"#422E75\"},{\"serieName\": \"hardware\",\"color\": \"#B094F8\"},{\"serieName\": \"help desk\",\"color\": \"#6A4ABA\"},{\"serieName\": \"it finance cab\",\"color\": \"#D1C0FB\"},{\"serieName\": \"it securities\",\"color\": \"#8C62F5\"},{\"serieName\": \"itsm engineering\",\"color\": \"#025B3C\"},{\"serieName\": \"incident management\",\"color\": \"#56D3A8\"},{\"serieName\": \"ldap admins\",\"color\": \"#049160\"},{\"serieName\": \"mobile analytics settings managers\",\"color\": \"#9BE5CB\"},{\"serieName\": \"ny db\",\"color\": \"#06BF7F\"},{\"serieName\": \"network\",\"color\": \"#785F1A\"},{\"serieName\": \"network cab managers\",\"color\": \"#FCD977\"},{\"serieName\": \"nimsoft desk\",\"color\": \"#BF982A\"},{\"serieName\": \"openspace\",\"color\": \"#FDE9AF\"},{\"serieName\": \"problem analyzers\",\"color\": \"#FCC838\"},{\"serieName\": \"problem solving\",\"color\": \"#22636B\"},{\"serieName\": \"procurement\",\"color\": \"#82DFE9\"},{\"serieName\": \"project mgmt\",\"color\": \"#369FAA\"},{\"serieName\": \"rma approvers\",\"color\": \"#B5ECF2\"},{\"serieName\": \"recommendation admin\",\"color\": \"#48D1E0\"},{\"serieName\": \"service desk\",\"color\": \"#163772\"},{\"serieName\": \"software\",\"color\": \"#71A1F4\"},{\"serieName\": \"survey creators\",\"color\": \"#2359B6\"},{\"serieName\": \"team development code reviewers\",\"color\": \"#ABC7F9\"},{\"serieName\": \"us presidents group 1\",\"color\": \"#2E75F0\"},{\"serieName\": \"us presidents group 2\",\"color\": \"#721F27\"},{\"serieName\": \"ecab approval\",\"color\": \"#F47E89\"}]}"
+      display_mode: CHART_MODE
+  - id: Viz_10
+    answer:
+      name: "Backlog Ageing: Incidents by Bucket"
+      description: 'Backlog of Open Incidents of each month with the age of incidents based on Incident Category '
+      tables:
+      - id: Spotapps_Servicenow_Incident_Managment
+        name: Spotapps_Servicenow_Incident_Managment
+      formulas:
+      - id: Open_date
+        name: Open_date
+        expr: "if ( abs ( diff_days ( [Task Opened Date] , today ( ) ) ) <= 10 ) then '1) 0-10 days' else if ( abs ( diff_days ( [Task Opened Date] , today ( ) ) ) >= 11 and abs ( diff_days ( [Task Opened Date] , today ( ) ) ) <= 30 ) then '2) 11-30 days' else if ( abs ( diff_days ( [Task Opened Date] , today ( ) ) ) >= 31 and abs ( diff_days ( [Task Opened Date] , today ( ) ) ) <= 90 ) then '3) 31-90 days' else null"
+      search_query: "[Open_date] [Task Classification].incident_task count [Task Number] [Open_date] != '{null}' [Incident Category] [Incident Category] != '{null}'"
+      answer_columns:
+      - name: Incident Category
+      - name: Task Classification
+      - name: Number of Task Number
+      - name: Open_date
+      table:
+        table_columns:
+        - column_id: Open_date
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Incident Category
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Number of Task Number
+          headline_aggregation: AVERAGE
+        ordered_column_ids:
+        - Open_date
+        - Incident Category
+        - Number of Task Number
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true,\"columnProperties\": [{\"columnId\": \"Open_date\",\"columnProperty\": {}}]}"
+      chart:
+        type: STACKED_COLUMN
+        chart_columns:
+        - column_id: Open_date
+        - column_id: Incident Category
+        - column_id: Number of Task Number
+        axis_configs:
+        - x:
+          - Open_date
+          y:
+          - Number of Task Number
+          color:
+          - Incident Category
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT1\",\"chartProperties\": {\"visibleSeriesNames\": [\"database\",\"hardware\",\"inquiry\",\"network\",\"software\"],\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"Number of Task Number\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"5ef2ebc4-2c9d-4775-841f-98fa6f9e5cfb\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Task Number\"],\"isOpposite\": false}},{\"id\": \"5bd803d8-89f2-4f9a-bfc9-71f07113942d\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Open_date\"]}}],\"seriesColors\": [{\"serieName\": \"Number of Task Number\",\"color\": \"#2E75F0\"},{\"serieName\": \"{null}\",\"color\": \"#06BF7F\"},{\"serieName\": \"inquiry\",\"color\": \"#48D1E0\"},{\"serieName\": \"database\",\"color\": \"#06BF7F\"},{\"serieName\": \"hardware\",\"color\": \"#FCC838\"},{\"serieName\": \"software\",\"color\": \"#C26232\"},{\"serieName\": \"network\",\"color\": \"#B6313E\"}],\"systemSeriesColors\": [{\"serieName\": \"Number of Task Number\",\"color\": \"#2E75F0\"},{\"serieName\": \"{null}\",\"color\": \"#06BF7F\"},{\"serieName\": \"database\",\"color\": \"#FCC838\"},{\"serieName\": \"hardware\",\"color\": \"#82DFE9\"},{\"serieName\": \"inquiry\",\"color\": \"#48D1E0\"},{\"serieName\": \"network\",\"color\": \"#71A1F4\"},{\"serieName\": \"software\",\"color\": \"#2E75F0\"}]}"
+      display_mode: CHART_MODE
+  - id: Viz_11
+    answer:
+      name: Backlog of Open Tickets Over Time
+      description: Cumulative Sum of the Open Tickets in the last 12 weeks
+      tables:
+      - id: Spotapps_Servicenow_Incident_Managment
+        name: Spotapps_Servicenow_Incident_Managment
+      formulas:
+      - id: Cumulative sum
+        name: Cumulative sum
+        expr: "cumulative_sum ( if ( not ( isnull ( [Task Number] ) ) and [Task State] = '1' ) then 1 else 0 , [Task Opened Date] )"
+      - id: Open Tasks
+        name: Open Tasks
+        expr: "cumulative_sum ( [count of tasks] , [opn_date] )"
+      - id: count of tasks
+        name: count of tasks
+        expr: "group_count ( [Task Number] , [Task Classification] , [opn_date] )"
+      - id: opn_date
+        name: opn_date
+        expr: "week_number_of_year ( [Task Opened Date] )"
+        properties:
+          column_type: ATTRIBUTE
+      search_query: "[Task Classification].incident_task [Cumulative sum] [opn_date] [Task Opened Date].'last 12 weeks' [Open Tasks] [Task Opened Date] [Task Opened Date].weekly"
+      answer_columns:
+      - name: opn_date
+      - name: Task Opened Date
+      - name: Task Classification
+      - name: Cumulative sum
+      - name: Open Tasks
+      - name: Week(Task Opened Date)
+      table:
+        table_columns:
+        - column_id: opn_date
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Week(Task Opened Date)
+          headline_aggregation: MIN-MAX
+        - column_id: Cumulative sum
+          headline_aggregation: MIN
+        - column_id: Open Tasks
+          headline_aggregation: TABLE_AGGR
+        ordered_column_ids:
+        - opn_date
+        - Week(Task Opened Date)
+        - Cumulative sum
+        - Open Tasks
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: opn_date
+        - column_id: Week(Task Opened Date)
+        - column_id: Cumulative sum
+        - column_id: Open Tasks
+        axis_configs:
+        - x:
+          - Week(Task Opened Date)
+          y:
+          - Cumulative sum
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT1\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {}},\"columnProperties\": [{\"columnId\": \"Cumulative sum\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"fafea125-34bd-4760-8b1f-28473da8031f\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Cumulative sum\"],\"isOpposite\": false}},{\"id\": \"20effc1b-28d8-42c8-85b1-c9967b775335\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Week(Task Opened Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Cumulative sum\",\"color\": \"#2E75F0\"}]}"
+      display_mode: CHART_MODE
+  - id: Viz_12
+    answer:
+      name: Incidents by Priority (Created monthly last 6 months)
+      description: Total % Incidents Created in last Six Months Based on the Priority
+      tables:
+      - id: Spotapps_Servicenow_Incident_Managment
+        name: Spotapps_Servicenow_Incident_Managment
+      formulas:
+      - id: p0%
+        name: p0%
+        expr: "[p0 count] / count ( [Task Number] ) * 100"
+      - id: p0 count
+        name: p0 count
+        expr: "count_if ( contains ( [incident priority] , 'p0 - critical' ) , [Task Number] )"
+      - id: p1%
+        name: p1%
+        expr: "[p1 count] / count ( [Task Number] ) * 100"
+      - id: p1 count
+        name: p1 count
+        expr: "count_if ( contains ( [incident priority] , 'p1 - high' ) , [Task Number] )"
+      - id: p2%
+        name: p2%
+        expr: "[p2 count] / count ( [Task Number] ) * 100"
+      - id: p2 count
+        name: p2 count
+        expr: "count_if ( contains ( [incident priority] , 'p2 - moderate' ) , [Task Number] )"
+      - id: incident priority
+        name: incident priority
+        expr: "if ( [Task Priority] = '1' ) then 'p0 - critical' else if ( [Task Priority] = '2' ) then 'p1 - high' else if ( [Task Priority] = '3' ) then 'p2 - moderate' else null"
+      search_query: "count [Task Number] [Task Classification] = 'incident' [Task Opened Date] [Task Opened Date].monthly [Task Opened Date].'last 6 months' [Task Priority]"
+      answer_columns:
+      - name: Task Priority
+      - name: Number of Task Number
+      - name: Task Opened Date
+      - name: Month(Task Opened Date)
+      - name: Task Classification
+      table:
+        table_columns:
+        - column_id: Month(Task Opened Date)
+          headline_aggregation: MIN-MAX
+        - column_id: Task Priority
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Number of Task Number
+          headline_aggregation: AVERAGE
+        ordered_column_ids:
+        - Month(Task Opened Date)
+        - Task Priority
+        - Number of Task Number
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true,\"columnProperties\": [{\"columnId\": \"5f8002ff-bdef-4ed0-8ef9-7c2815f7616b\",\"columnProperty\": {}}]}"
+      chart:
+        type: STACKED_COLUMN
+        chart_columns:
+        - column_id: Month(Task Opened Date)
+        - column_id: Task Priority
+        - column_id: Number of Task Number
+        axis_configs:
+        - x:
+          - Month(Task Opened Date)
+          y:
+          - Number of Task Number
+          color:
+          - Task Priority
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT1\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"isStackedAsPercent\": true,\"stackedAsPercentFormat\": {\"category\": \"PERCENTAGE\",\"percentageFormatConfig\": {\"decimals\": 2.0},\"isCategoryEditable\": false}},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"Number of Task Number\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"4eca31c7-7d13-4650-9f02-f81ef54710c9\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Task Number\"],\"isOpposite\": false}},{\"id\": \"f8477166-723d-4510-81d5-a0455dd0026b\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(Task Opened Date)\"]}}],\"seriesColors\": [{\"serieName\": \"b075c2b4-109b-42b1-bc30-be6af871e476\",\"color\": \"#2E75F0\"},{\"serieName\": \"7837b186-3183-4082-903e-135b0d825244\",\"color\": \"#FCC838\"},{\"serieName\": \"Number of Task Number\",\"color\": \"#B5ECF2\"},{\"serieName\": \"05e2f9ec-6b43-4086-ace3-ad1bf278df5f\",\"color\": \"#049160\"}],\"systemSeriesColors\": [{\"serieName\": \"1\",\"color\": \"#06BF7F\"},{\"serieName\": \"2\",\"color\": \"#FCC838\"},{\"serieName\": \"3\",\"color\": \"#48D1E0\"},{\"serieName\": \"4\",\"color\": \"#71A1F4\"},{\"serieName\": \"5\",\"color\": \"#2E75F0\"}]}"
+      display_mode: CHART_MODE
+  - id: Viz_13
+    answer:
+      name: Open Tickets by Agent
+      description: Top 20 Total No of Open Incidents  based on assigned user name
+      tables:
+      - id: Spotapps_Servicenow_Incident_Managment
+        name: Spotapps_Servicenow_Incident_Managment
+      formulas:
+      - id: Open tasks
+        name: Open tasks
+        expr: "if ( [Task State] = '-5' ) then 'open' else if ( [Task State] = '1' ) then 'open' else if ( [Task State] = '2' ) then 'open' else null"
+      search_query: "[Task Classification] = 'incident_task' [Open tasks] count [Task Number] [Open tasks] != '{null}' [Incident Category] [assigned_Name] top 20"
+      answer_columns:
+      - name: assigned_Name
+      - name: Open tasks
+      - name: Task Classification
+      - name: Number of Task Number
+      - name: Incident Category
+      table:
+        table_columns:
+        - column_id: Open tasks
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Incident Category
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: assigned_Name
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Number of Task Number
+          headline_aggregation: AVERAGE
+        ordered_column_ids:
+        - Open tasks
+        - Incident Category
+        - assigned_Name
+        - Number of Task Number
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true,\"columnProperties\": [{\"columnId\": \"Open tasks\",\"columnProperty\": {}}]}"
+      chart:
+        type: COLUMN
+        chart_columns:
+        - column_id: Open tasks
+        - column_id: Incident Category
+        - column_id: assigned_Name
+        - column_id: Number of Task Number
+        axis_configs:
+        - x:
+          - assigned_Name
+          y:
+          - Number of Task Number
+          color:
+          - Open tasks
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT1\",\"chartProperties\": {\"chartSpecific\": {}},\"columnProperties\": [{\"columnId\": \"Number of Task Number\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"40dc7b51-9e5b-41f8-9896-4990ac105662\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Task Number\"],\"isOpposite\": false}},{\"id\": \"dafc3480-97b6-4e8f-86e6-5ee387c2f629\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"assigned_Name\"]}}],\"systemSeriesColors\": [{\"serieName\": \"open\",\"color\": \"#2E75F0\"}]}"
+      display_mode: CHART_MODE
+  - id: Viz_14
+    answer:
+      name: Incidents Self Closed vs Closed by Agent
+      description: Monthly  % of incidents Closed by  user/caller and agent
+      tables:
+      - id: Spotapps_Servicenow_Incident_Managment
+        name: Spotapps_Servicenow_Incident_Managment
+      formulas:
+      - id: Closed by agent
+        name: Closed by agent
+        expr: "[Closed agent counts] / count ( [Task Number] ) * 100"
+      - id: Closed agent counts
+        name: Closed agent counts
+        expr: "count_if ( contains ( [Close_codes] , 'closed_agent' ) , [Task Number] )"
+      - id: Self closed
+        name: Self closed
+        expr: "[Closed incidents count] / count ( [Task Number] ) * 100"
+      - id: Closed incidents count
+        name: Closed incidents count
+        expr: "count_if ( contains ( [Close_codes] , 'self_closed' ) , [Task Number] )"
+      - id: Close_codes
+        name: Close_codes
+        expr: "if ( [Incident Close code] = 'closed/resolved by caller' ) then 'self_closed' else if ( [Incident Close code] in { 'solved remotely (permanently)' , 'solved (work around)' , 'solved remotely (work around)' , 'solved (permanently)' } ) then 'closed_agent' else null"
+      search_query: "[Task Classification] = 'incident_task' [Close_codes] != '{null}' [Self closed] [Closed by agent] [Task Closed Date] [Task Closed Date].monthly [Task Closed Date].'last 12 months'"
+      answer_columns:
+      - name: Close_codes
+      - name: Month(Task Closed Date)
+      - name: Task Closed Date
+      - name: Closed by agent
+      - name: Task Classification
+      - name: Self closed
+      table:
+        table_columns:
+        - column_id: Month(Task Closed Date)
+          headline_aggregation: MIN-MAX
+        - column_id: Self closed
+          headline_aggregation: TABLE_AGGR
+        - column_id: Closed by agent
+          headline_aggregation: TABLE_AGGR
+        ordered_column_ids:
+        - Month(Task Closed Date)
+        - Self closed
+        - Closed by agent
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true,\"columnProperties\": [{\"columnId\": \"b8332efa-8217-4ca5-a402-30917a2285b0\",\"columnProperty\": {}}]}"
+      chart:
+        type: STACKED_COLUMN
+        chart_columns:
+        - column_id: Month(Task Closed Date)
+        - column_id: Self closed
+        - column_id: Closed by agent
+        axis_configs:
+        - x:
+          - Month(Task Closed Date)
+          y:
+          - Self closed
+          - Closed by agent
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT1\",\"chartProperties\": {\"chartSpecific\": {\"isStackedAsPercent\": true,\"stackedAsPercentFormat\": {\"category\": \"PERCENTAGE\",\"percentageFormatConfig\": {\"decimals\": 2.0,\"removeTrailingZeroes\": false},\"isCategoryEditable\": false}},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"Self closed\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Closed by agent\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"48157336-6e14-489e-a815-1494195afd46\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Self closed\",\"Closed by agent\"],\"isOpposite\": false}},{\"id\": \"160e7834-3877-4ab7-98eb-9b0ea357e62c\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(Task Closed Date)\"]}}],\"seriesColors\": [{\"serieName\": \"Closed by agent\",\"color\": \"#B094F8\"},{\"serieName\": \"Self closed\",\"color\": \"#FCD977\"}],\"systemSeriesColors\": [{\"serieName\": \"Self closed\",\"color\": \"#48D1E0\"},{\"serieName\": \"Closed by agent\",\"color\": \"#2E75F0\"}]}"
+      display_mode: CHART_MODE
+  - id: Viz_15
+    answer:
+      name: Total No. of Related Incidents associated to Problems
+      description: Total No of Related incidents associated  to Problems based on the Problem resolution code
+      tables:
+      - id: Spotapps_Servicenow_Problem_Managment
+        name: Spotapps_Servicenow_Problem_Managment
+      search_query: "[Problem Resolution code] [Problem Resolution code] != '{null}' [Task Classification] = 'problem_task' [related_incidents]"
+      answer_columns:
+      - name: Total related_incidents
+      - name: Problem Resolution code
+      - name: Task Classification
+      table:
+        table_columns:
+        - column_id: Problem Resolution code
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Total related_incidents
+          headline_aggregation: TABLE_AGGR
+        ordered_column_ids:
+        - Problem Resolution code
+        - Total related_incidents
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true}"
+      chart:
+        type: PIE
+        chart_columns:
+        - column_id: Problem Resolution code
+        - column_id: Total related_incidents
+        axis_configs:
+        - x:
+          - Problem Resolution code
+          y:
+          - Total related_incidents
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT1\",\"chartProperties\": {\"chartSpecific\": {},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"Total related_incidents\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"ad794cdd-3598-4e7b-a806-29251a68830b\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Total related_incidents\"],\"isOpposite\": false}},{\"id\": \"bd7008b7-be46-450c-b21f-118d8d9393e2\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Problem Resolution code\"]}}],\"systemSeriesColors\": [{\"serieName\": \"Total related_incidents\",\"color\": \"#2E75F0\"},{\"serieName\": \"canceled\",\"color\": \"#06BF7F\"},{\"serieName\": \"duplicate\",\"color\": \"#FCC838\"},{\"serieName\": \"fix_applied\",\"color\": \"#48D1E0\"},{\"serieName\": \"risk_accepted\",\"color\": \"#2E75F0\"}]}"
+      display_mode: CHART_MODE
+  - id: Viz_16
+    answer:
+      name: Problems by Contact Type and Approval State
+      description: Count of problems for different contact types and approval states
+      tables:
+      - id: Spotapps_Servicenow_Problem_Managment
+        name: Spotapps_Servicenow_Problem_Managment
+      search_query: "[Task Classification].problem_task [Task Contact type] [Task Contact type] != '{null}' [Task Approval] count [Task Number]"
+      answer_columns:
+      - name: Task Approval
+      - name: Task Contact type
+      - name: Task Classification
+      - name: Number of Task Number
+      table:
+        table_columns:
+        - column_id: Task Contact type
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Task Approval
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Number of Task Number
+          headline_aggregation: AVERAGE
+        ordered_column_ids:
+        - Task Contact type
+        - Task Approval
+        - Number of Task Number
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true}"
+      chart:
+        type: SANKEY
+        chart_columns:
+        - column_id: Task Contact type
+        - column_id: Task Approval
+        - column_id: Number of Task Number
+        axis_configs:
+        - x:
+          - Task Contact type
+          - Task Approval
+          y:
+          - Number of Task Number
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT1\",\"chartProperties\": {\"responsiveLayoutPreference\": \"USER_PREFERRED_ON\",\"chartSpecific\": {\"isStackedAsPercent\": true,\"stackedAsPercentFormat\": {\"category\": \"PERCENTAGE\",\"percentageFormatConfig\": {\"decimals\": 2.0,\"removeTrailingZeroes\": false},\"isCategoryEditable\": false}},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"Number of Task Number\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"aab9b72c-ceed-4934-8235-3213907611f6\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Number of Task Number\"],\"isOpposite\": false}},{\"id\": \"73101c8a-fa1a-4077-8a84-6b0ab742df49\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Task Contact type\",\"Task Approval\"]}}],\"systemSeriesColors\": [{\"serieName\": \"email\",\"color\": \"#06BF7F\"},{\"serieName\": \"phone\",\"color\": \"#FCC838\"},{\"serieName\": \"self-service\",\"color\": \"#48D1E0\"},{\"serieName\": \"walk-in\",\"color\": \"#2E75F0\"},{\"serieName\": \"Number of Task Number\",\"color\": \"#2E75F0\"},{\"serieName\": \"approved\",\"color\": \"#06BF7F\"},{\"serieName\": \"not requested\",\"color\": \"#FCC838\"},{\"serieName\": \"rejected\",\"color\": \"#48D1E0\"},{\"serieName\": \"requested\",\"color\": \"#2E75F0\"},{\"serieName\": \"email, approved\",\"color\": \"#FFA97E\"},{\"serieName\": \"email, not requested\",\"color\": \"#FF8142\"},{\"serieName\": \"email, rejected\",\"color\": \"#B094F8\"},{\"serieName\": \"email, requested\",\"color\": \"#8C62F5\"},{\"serieName\": \"phone, approved\",\"color\": \"#049160\"},{\"serieName\": \"phone, not requested\",\"color\": \"#56D3A8\"},{\"serieName\": \"phone, rejected\",\"color\": \"#06BF7F\"},{\"serieName\": \"phone, requested\",\"color\": \"#BF982A\"},{\"serieName\": \"self-service, approved\",\"color\": \"#FCD977\"},{\"serieName\": \"self-service, not requested\",\"color\": \"#FCC838\"},{\"serieName\": \"self-service, rejected\",\"color\": \"#369FAA\"},{\"serieName\": \"self-service, requested\",\"color\": \"#82DFE9\"},{\"serieName\": \"walk-in, approved\",\"color\": \"#48D1E0\"},{\"serieName\": \"walk-in, not requested\",\"color\": \"#2359B6\"},{\"serieName\": \"walk-in, rejected\",\"color\": \"#71A1F4\"},{\"serieName\": \"walk-in, requested\",\"color\": \"#2E75F0\"},{\"serieName\": \"Task Approval\",\"color\": \"#2E75F0\"}]}"
+      display_mode: CHART_MODE
+  - id: Viz_17
+    answer:
+      name: Problem Open vs Close Rate Monthly
+      description: Average rate of opened and closed problems on monthly basis
+      tables:
+      - id: Spotapps_Servicenow_Problem_Managment
+        name: Spotapps_Servicenow_Problem_Managment
+      formulas:
+      - id: Open rate
+        name: Open rate
+        expr: "[Open Problem count] / count ( [Task Number] ) * 100"
+      - id: Open Problem count
+        name: Open Problem count
+        expr: "count_if ( contains ( [Problem_codes] , 'open' ) , [Task Number] )"
+      - id: closed rate
+        name: closed rate
+        expr: "[Closed Problems count] / count ( [Task Number] ) * 100"
+      - id: Closed Problems count
+        name: Closed Problems count
+        expr: "count_if ( contains ( [Problem_codes] , 'closed' ) , [Task Number] )"
+      - id: Problem_codes
+        name: Problem_codes
+        expr: "if ( [Task State] in { '151' , '154' } ) then 'open' else if ( [Task State] = '157' ) then 'closed' else null"
+      search_query: "[Task Classification].problem_task [Problem_codes] count [Task Number] [closed rate] [Open rate] [Problem_codes] != '{null}' [Task Opened Date] [Task Opened Date].monthly [Task Opened Date].'last 12 months'"
+      answer_columns:
+      - name: Month(Task Opened Date)
+      - name: closed rate
+      - name: Number of Task Number
+      - name: Task Opened Date
+      - name: Open rate
+      - name: Problem_codes
+      - name: Task Classification
+      table:
+        table_columns:
+        - column_id: Problem_codes
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Month(Task Opened Date)
+          headline_aggregation: MIN-MAX
+        - column_id: Number of Task Number
+          headline_aggregation: AVERAGE
+        - column_id: closed rate
+          headline_aggregation: TABLE_AGGR
+        - column_id: Open rate
+          headline_aggregation: TABLE_AGGR
+        ordered_column_ids:
+        - Problem_codes
+        - Month(Task Opened Date)
+        - Number of Task Number
+        - closed rate
+        - Open rate
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true,\"columnProperties\": [{\"columnId\": \"Problem_codes\",\"columnProperty\": {}}]}"
+      chart:
+        type: STACKED_COLUMN
+        chart_columns:
+        - column_id: Problem_codes
+        - column_id: Month(Task Opened Date)
+        - column_id: Number of Task Number
+        - column_id: closed rate
+        - column_id: Open rate
+        axis_configs:
+        - x:
+          - Month(Task Opened Date)
+          y:
+          - closed rate
+          - Open rate
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT1\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"isStackedAsPercent\": true,\"stackedAsPercentFormat\": {\"category\": \"PERCENTAGE\",\"percentageFormatConfig\": {\"decimals\": 2.0,\"removeTrailingZeroes\": false},\"isCategoryEditable\": false}},\"showStackedLabels\": false,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"Problem_codes\",\"columnProperty\": {}},{\"columnId\": \"closed rate\",\"columnProperty\": {\"dataLabels\": true}},{\"columnId\": \"Open rate\",\"columnProperty\": {\"dataLabels\": true}}],\"axisProperties\": [{\"id\": \"bdc0b78c-21ef-4d16-934d-587b8e31c252\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"closed rate\",\"Open rate\"],\"isOpposite\": false}},{\"id\": \"1dc7f4a0-ae8a-4b9f-814e-932aa69221ed\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(Task Opened Date)\"]}}],\"systemSeriesColors\": [{\"serieName\": \"19771ea5-b1c7-421b-be22-baa542d22a3c\",\"color\": \"#2E75F0\"},{\"serieName\": \"e2cff167-ba88-4c9a-9240-85ea3cbf461c\",\"color\": \"#48D1E0\"},{\"serieName\": \"Number of Task Number\",\"color\": \"#48D1E0\"},{\"serieName\": \"closed rate\",\"color\": \"#FCC838\"},{\"serieName\": \"Open rate\",\"color\": \"#06BF7F\"}]}"
+      display_mode: CHART_MODE
+  - id: Viz_18
+    answer:
+      name: Problems by Priority and State
+      description: Count of problems based on different states and priorities  till date
+      tables:
+      - id: Spotapps_Servicenow_Problem_Managment
+        name: Spotapps_Servicenow_Problem_Managment
+      formulas:
+      - id: Priority
+        name: Priority
+        expr: "if ( [Task Priority] = '1' ) then '1-critical' else if ( [Task Priority] = '2' ) then '2-high' else if ( [Task Priority] = '3' ) then '3-moderate' else if ( [Task Priority] = '4' ) then '4-low' else if ( [Task Priority] = '5' ) then '5-planning' else null"
+      - id: state
+        name: state
+        expr: "if ( [Task Classification] = 'problem_task' ) then ( if ( [Task State] = '151' ) then 'new' else if ( [Task State] = '152' ) then 'assess' else if ( [Task State] = '154' ) then 'work in progress' else if ( [Task State] = '157' ) then 'closed' else null ) else null"
+      search_query: "[Task Classification].problem_task [state] [Priority] count [Task Number]"
+      answer_columns:
+      - name: Task Classification
+      - name: Number of Task Number
+      - name: Priority
+      - name: state
+      table:
+        table_columns:
+        - column_id: state
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Priority
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Number of Task Number
+          headline_aggregation: AVERAGE
+        ordered_column_ids:
+        - state
+        - Priority
+        - Number of Task Number
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true,\"columnProperties\": [{\"columnId\": \"Task Classification\",\"columnProperty\": {}}]}"
+      chart:
+        type: HEATMAP
+        chart_columns:
+        - column_id: state
+        - column_id: Priority
+        - column_id: Number of Task Number
+        axis_configs:
+        - x:
+          - state
+          y:
+          - Priority
+          size: Number of Task Number
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT1\",\"chartProperties\": {\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {}},\"axisProperties\": [{\"id\": \"56e9fe0f-fa09-4d3d-8779-7400e939e496\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Priority\"],\"isOpposite\": false}},{\"id\": \"46f521c0-30d7-4a46-b2a8-e3fc1831bd99\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"state\"]}}],\"systemSeriesColors\": [{\"serieName\": \"1\",\"color\": \"#06BF7F\"},{\"serieName\": \"2\",\"color\": \"#FCC838\"},{\"serieName\": \"3\",\"color\": \"#48D1E0\"},{\"serieName\": \"4\",\"color\": \"#71A1F4\"},{\"serieName\": \"5\",\"color\": \"#2E75F0\"},{\"serieName\": \"e0616c6f-7bdd-4101-aae0-3e699c72fd70\",\"color\": \"#2E75F0\"},{\"serieName\": \"45526752-9afd-4125-9888-6e55abc47eed\",\"color\": \"#2E75F0\"},{\"serieName\": \"Number of Task Number\",\"color\": \"#2E75F0\"},{\"serieName\": \"Priority\",\"color\": \"#2E75F0\"}]}"
+      display_mode: CHART_MODE
+  - id: Viz_19
+    answer:
+      name: Backlog of Open Problems
+      description: Cumulative sum of the open problems till date
+      tables:
+      - id: Spotapps_Servicenow_Problem_Managment
+        name: Spotapps_Servicenow_Problem_Managment
+      formulas:
+      - id: Cumulative sum
+        name: Cumulative sum
+        expr: "cumulative_sum ( if ( not ( isnull ( [Task Number] ) ) and [Problem_codes] = 'open' ) then 1 else 0 , [Task Opened Date] )"
+      - id: Open rate
+        name: Open rate
+        expr: "[Open Problem count] / count ( [Task Number] ) * 100"
+      - id: Open Problem count
+        name: Open Problem count
+        expr: "count_if ( contains ( [Problem_codes] , 'open' ) , [Task Number] )"
+      - id: closed rate
+        name: closed rate
+        expr: "[Closed Problems count] / count ( [Task Number] ) * 100"
+      - id: Closed Problems count
+        name: Closed Problems count
+        expr: "count_if ( contains ( [Problem_codes] , 'closed' ) , [Task Number] )"
+      - id: Problem_codes
+        name: Problem_codes
+        expr: "if ( [Task State] in { '151' , '154' } ) then 'open' else if ( [Task State] = '157' ) then 'closed' else null"
+      search_query: "[Task Classification].problem_task [Problem_codes] count [Task Number] [Problem_codes] != '{null}' [Task Opened Date] [Task Opened Date].monthly [Cumulative sum]"
+      answer_columns:
+      - name: Month(Task Opened Date)
+      - name: Number of Task Number
+      - name: Problem_codes
+      - name: Cumulative sum
+      - name: Task Classification
+      table:
+        table_columns:
+        - column_id: Problem_codes
+          headline_aggregation: COUNT_DISTINCT
+        - column_id: Month(Task Opened Date)
+          headline_aggregation: MIN-MAX
+        - column_id: Number of Task Number
+          headline_aggregation: AVERAGE
+        - column_id: Cumulative sum
+          headline_aggregation: MIN
+        ordered_column_ids:
+        - Problem_codes
+        - Month(Task Opened Date)
+        - Number of Task Number
+        - Cumulative sum
+        client_state: ""
+        client_state_v2: "{\"tableVizPropVersion\": \"V1\",\"wrapTableHeader\": true,\"columnProperties\": [{\"columnId\": \"Problem_codes\",\"columnProperty\": {}}]}"
+      chart:
+        type: STACKED_COLUMN
+        chart_columns:
+        - column_id: Problem_codes
+        - column_id: Month(Task Opened Date)
+        - column_id: Number of Task Number
+        - column_id: Cumulative sum
+        axis_configs:
+        - x:
+          - Month(Task Opened Date)
+          y:
+          - Cumulative sum
+        client_state: ""
+        client_state_v2: "{\"version\": \"V4DOT1\",\"chartProperties\": {\"gridLines\": {},\"responsiveLayoutPreference\": \"AUTO_ON\",\"chartSpecific\": {\"isStackedAsPercent\": false},\"showStackedLabels\": true,\"allLabels\": true},\"columnProperties\": [{\"columnId\": \"Problem_codes\",\"columnProperty\": {}}],\"axisProperties\": [{\"id\": \"54281de0-7c21-429a-9988-942248825c81\",\"properties\": {\"axisType\": \"Y\",\"linkedColumns\": [\"Cumulative sum\"],\"isOpposite\": false}},{\"id\": \"f812ef43-61f4-4e97-b9cd-88bf193ed6f7\",\"properties\": {\"axisType\": \"X\",\"linkedColumns\": [\"Month(Task Opened Date)\"]}}],\"seriesColors\": [{\"serieName\": \"19771ea5-b1c7-421b-be22-baa542d22a3c\",\"color\": \"#2E75F0\"},{\"serieName\": \"e2cff167-ba88-4c9a-9240-85ea3cbf461c\",\"color\": \"#48D1E0\"},{\"serieName\": \"Number of Task Number\",\"color\": \"#48D1E0\"},{\"serieName\": \"9924ae67-dbef-4a15-9946-e0afd5c74bb7\",\"color\": \"#FCC838\"},{\"serieName\": \"60c87e83-d659-4f81-891d-8a348d3deb8e\",\"color\": \"#06BF7F\"},{\"serieName\": \"Cumulative sum\",\"color\": \"#82DFE9\"}],\"systemSeriesColors\": [{\"serieName\": \"19771ea5-b1c7-421b-be22-baa542d22a3c\",\"color\": \"#2E75F0\"},{\"serieName\": \"e2cff167-ba88-4c9a-9240-85ea3cbf461c\",\"color\": \"#48D1E0\"},{\"serieName\": \"Number of Task Number\",\"color\": \"#48D1E0\"},{\"serieName\": \"9924ae67-dbef-4a15-9946-e0afd5c74bb7\",\"color\": \"#FCC838\"},{\"serieName\": \"60c87e83-d659-4f81-891d-8a348d3deb8e\",\"color\": \"#06BF7F\"},{\"serieName\": \"Cumulative sum\",\"color\": \"#2E75F0\"}]}"
+      display_mode: CHART_MODE
+  layout:
+    tiles:
+    - visualization_id: Viz_1
+      size: EXTRA_SMALL
+    - visualization_id: Viz_3
+      size: EXTRA_SMALL
+    - visualization_id: Viz_2
+      size: EXTRA_SMALL
+    - visualization_id: Viz_4
+      size: EXTRA_SMALL
+    - visualization_id: Viz_5
+      size: MEDIUM
+    - visualization_id: Viz_6
+      size: MEDIUM
+    - visualization_id: Viz_7
+      size: MEDIUM
+    - visualization_id: Viz_8
+      size: MEDIUM
+    - visualization_id: Viz_9
+      size: LARGE
+    - visualization_id: Viz_10
+      size: MEDIUM
+    - visualization_id: Viz_11
+      size: MEDIUM
+    - visualization_id: Viz_12
+      size: MEDIUM
+    - visualization_id: Viz_13
+      size: MEDIUM
+    - visualization_id: Viz_14
+      size: MEDIUM
+    - visualization_id: Viz_15
+      size: MEDIUM
+    - visualization_id: Viz_16
+      size: MEDIUM
+    - visualization_id: Viz_17
+      size: MEDIUM
+    - visualization_id: Viz_18
+      size: MEDIUM
+    - visualization_id: Viz_19
+      size: MEDIUM

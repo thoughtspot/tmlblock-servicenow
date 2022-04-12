@@ -1,0 +1,1280 @@
+name: conn_spotapps_snow
+type: RDBMS_SNOWFLAKE
+authentication_type: SERVICE_ACCOUNT
+properties:
+- key: accountName
+  value: thoughtspot_partner
+- key: user
+  value: EYARRAMREDDY
+- key: password
+  value: ""
+- key: role
+  value: SYSADMIN
+- key: warehouse
+  value: DEV_WH_SPOTAPPS
+- key: database
+  value: SPOTAPPS_DB
+table:
+- name: snow_incident_task
+  id: a7818e59-7480-43d4-80c9-cbd4f16a026f
+  external_table:
+    db_name: SPOTAPPS_DB
+    schema_name: SERVICENOW
+    table_name: snow_incident_task
+  column:
+  - name: _id
+    id: 0ab6a3de-b29e-4c9e-a510-fd4b5eeecb89
+    data_type: VARCHAR
+    external_column: _id
+  - name: task_effective_number
+    id: 86dad1d1-5ec2-481c-9f36-edd43f1f0fbf
+    data_type: VARCHAR
+    external_column: task_effective_number
+  - name: skills
+    id: 3fa14fd1-80fd-4516-ba2a-5004c0e89438
+    data_type: VARCHAR
+    external_column: skills
+  - name: incident
+    id: 7e96ee90-c150-46b3-aced-666720284428
+    data_type: VARCHAR
+    external_column: incident
+- name: servicenow_incident
+  id: f48b8524-0067-4e48-9ad1-bc9d0bbc9a0c
+  external_table:
+    db_name: SPOTAPPS_DB
+    schema_name: SERVICENOW
+    table_name: servicenow_incident
+  column:
+  - name: _id
+    id: e54516d1-c52d-4d1b-8a5f-16b95248a6b6
+    data_type: VARCHAR
+    external_column: _id
+  - name: sys_id
+    id: b15ea66c-5215-4962-865d-fb39f5c0828d
+    data_type: VARCHAR
+    external_column: sys_id
+  - name: caused_by
+    id: 21c4c38b-8fe8-41b0-8c12-e49901efd39f
+    data_type: VARCHAR
+    external_column: caused_by
+  - name: child_incidents
+    id: e1a0875b-dfdf-42b4-94d4-1c74fe5f5732
+    data_type: VARCHAR
+    external_column: child_incidents
+  - name: hold_reason
+    id: a50cf679-cad2-4560-880f-fedeee85bbe5
+    data_type: VARCHAR
+    external_column: hold_reason
+  - name: task_effective_number
+    id: 83e349d9-ec74-4640-a236-7f13a444665f
+    data_type: VARCHAR
+    external_column: task_effective_number
+  - name: resolved_by
+    id: 622753a2-144e-49cf-b120-f074e521b279
+    data_type: VARCHAR
+    external_column: resolved_by
+  - name: calendar_stc
+    id: 478f35ac-9674-4e3d-b541-b224e8c84286
+    data_type: VARCHAR
+    external_column: calendar_stc
+  - name: rfc
+    id: 65b82bb1-0f2c-4080-aef7-171e19341394
+    data_type: VARCHAR
+    external_column: rfc
+  - name: caller_id
+    id: c319751d-ea64-4bec-a00f-c053eeffbe82
+    data_type: VARCHAR
+    external_column: caller_id
+  - name: reopened_time
+    id: 0f7615cb-7044-4c25-8896-f17f384bbc31
+    data_type: VARCHAR
+    external_column: reopened_time
+  - name: resolved_at
+    id: a4c1104e-4011-4973-978a-f1b8bcd1578b
+    data_type: DATE_TIME
+    external_column: resolved_at
+  - name: subcategory
+    id: d186b39e-49e7-4547-be14-423c7ab36586
+    data_type: VARCHAR
+    external_column: subcategory
+  - name: close_code
+    id: b042d0c5-1ec9-4b0e-87b9-f284ccd512ec
+    data_type: VARCHAR
+    external_column: close_code
+  - name: business_stc
+    id: 3ff3f766-5d51-46c5-8b1e-043de3291b4c
+    data_type: VARCHAR
+    external_column: business_stc
+  - name: notify
+    id: 0a74cc49-9795-4db6-af46-7c2b9154e82c
+    data_type: VARCHAR
+    external_column: notify
+  - name: parent_incident
+    id: 145e5d11-287c-4be4-83d2-226589164bf7
+    data_type: VARCHAR
+    external_column: parent_incident
+  - name: reopened_by
+    id: de8f352b-9129-4614-8d94-9996c1414bea
+    data_type: VARCHAR
+    external_column: reopened_by
+  - name: incident_state
+    id: c122412f-7c5a-4c7b-9107-a79799c3a2fa
+    data_type: VARCHAR
+    external_column: incident_state
+  - name: problem_id
+    id: 1615234a-835d-4b6f-afa3-6421b9f4ed3e
+    data_type: VARCHAR
+    external_column: problem_id
+  - name: severity
+    id: b9af80b6-db40-4a28-be6e-038b84c6ee92
+    data_type: VARCHAR
+    external_column: severity
+  - name: reopen_count
+    id: c7579079-d5fa-4854-9317-b791bc7dd3d3
+    data_type: VARCHAR
+    external_column: reopen_count
+  - name: category
+    id: 6d674d27-5aa8-4ec2-9a15-0e95d600bfab
+    data_type: VARCHAR
+    external_column: category
+- name: snow_cmn_location
+  id: a729a6fc-a133-40d9-9e0f-229d3c2ac3c7
+  external_table:
+    db_name: SPOTAPPS_DB
+    schema_name: SERVICENOW
+    table_name: snow_cmn_location
+  column:
+  - name: _id
+    id: 52f0c77a-b897-4905-af54-2d84b12c3fca
+    data_type: VARCHAR
+    external_column: _id
+  - name: country
+    id: 7067ef4e-626b-4367-a678-0c7e401d9a4c
+    data_type: VARCHAR
+    external_column: country
+  - name: parent
+    id: e8236660-20dd-4907-92ba-4abb7aac387b
+    data_type: VARCHAR
+    external_column: parent
+  - name: city
+    id: 226df620-0a36-430f-b3ab-6ff73414e66f
+    data_type: VARCHAR
+    external_column: city
+  - name: latitude
+    id: 2658c3fa-2091-48bd-b37f-e003decaadeb
+    data_type: VARCHAR
+    external_column: latitude
+  - name: sys_updated_on
+    id: b21d1d53-cba7-4a2b-b855-a7ab3d6c3347
+    data_type: DATE_TIME
+    external_column: sys_updated_on
+  - name: sys_id
+    id: ac3df5b7-14cf-46da-940b-69e9a09e7886
+    data_type: VARCHAR
+    external_column: sys_id
+  - name: sys_updated_by
+    id: 113a9712-70f1-4568-9ff5-65a174089bfb
+    data_type: VARCHAR
+    external_column: sys_updated_by
+  - name: stock_room
+    id: f8321891-fab0-44a9-82e6-51384cf481c7
+    data_type: VARCHAR
+    external_column: stock_room
+  - name: street
+    id: a5c10dcf-caa2-4fc4-b92c-311e1efe2cc1
+    data_type: VARCHAR
+    external_column: street
+  - name: sys_created_on
+    id: ad3d9df9-9178-40de-8b1f-937b380abd5f
+    data_type: DATE_TIME
+    external_column: sys_created_on
+  - name: contact
+    id: 5c706d11-2f9f-4a8f-ae63-947da7632386
+    data_type: VARCHAR
+    external_column: contact
+  - name: phone_territory
+    id: 39a6acc0-3017-4916-9665-8ff127a40cc4
+    data_type: VARCHAR
+    external_column: phone_territory
+  - name: company
+    id: 7ca14cb4-256f-474a-be97-c4b7ac361b12
+    data_type: VARCHAR
+    external_column: company
+  - name: lat_long_error
+    id: ff25dca6-2df1-4e6d-8acf-ded5c63a094b
+    data_type: VARCHAR
+    external_column: lat_long_error
+  - name: state
+    id: 3d4cdef3-d0b5-478b-af01-ee7e4cf180c8
+    data_type: VARCHAR
+    external_column: state
+  - name: sys_created_by
+    id: 71a00820-d140-4aee-98f1-ac8e6850552e
+    data_type: VARCHAR
+    external_column: sys_created_by
+  - name: longitude
+    id: 2adfd4fa-920c-42ac-a17d-438df953036d
+    data_type: VARCHAR
+    external_column: longitude
+  - name: __status
+    id: 3141fcff-414d-4fb8-a89f-8b79e1c4453d
+    data_type: VARCHAR
+    external_column: __status
+  - name: zip
+    id: 60d3cccc-e18f-462a-8188-536fce320835
+    data_type: VARCHAR
+    external_column: zip
+  - name: sys_mod_count
+    id: ce1f338c-1bf2-4cd1-aeee-74a659aa0e2d
+    data_type: VARCHAR
+    external_column: sys_mod_count
+  - name: sys_tags
+    id: 48219678-49ad-44f7-b7a9-0ddf3c32992c
+    data_type: VARCHAR
+    external_column: sys_tags
+  - name: time_zone
+    id: 0885ee4c-f5d3-4798-ba4d-98eecf187bc5
+    data_type: VARCHAR
+    external_column: time_zone
+  - name: full_name
+    id: a5e2daa5-d2c1-49c6-b28e-e65a4a059a2b
+    data_type: VARCHAR
+    external_column: full_name
+  - name: fax_phone
+    id: f0c41ff9-add7-4a3f-b37e-765840727237
+    data_type: VARCHAR
+    external_column: fax_phone
+  - name: phone
+    id: 41997d04-b7c0-41cd-b217-9a4a23969dec
+    data_type: VARCHAR
+    external_column: phone
+  - name: name
+    id: f3af7441-e2f5-45c0-ae5f-b56e6a4e70b1
+    data_type: VARCHAR
+    external_column: name
+  - name: coordinates_retrieved_on
+    id: 9d78f308-5ba0-41fa-9380-efaec288ed3e
+    data_type: VARCHAR
+    external_column: coordinates_retrieved_on
+- name: snow_task
+  id: 5507a187-24ec-4b6f-9eec-ce0f3b570847
+  external_table:
+    db_name: SPOTAPPS_DB
+    schema_name: SERVICENOW
+    table_name: snow_task
+  column:
+  - name: _id
+    id: a6b6adaa-0265-469c-ac50-d507b9f43a61
+    data_type: VARCHAR
+    external_column: _id
+  - name: parent
+    id: 2da12535-0e74-49c9-bfb3-62afe7052bb2
+    data_type: VARCHAR
+    external_column: parent
+  - name: made_sla
+    id: ae62852c-9aac-4ede-893a-e9be4ea0c40a
+    data_type: VARCHAR
+    external_column: made_sla
+  - name: watch_list
+    id: 4f9ccf73-d3f1-4e91-aa1c-9f7c0c9dd31a
+    data_type: VARCHAR
+    external_column: watch_list
+  - name: upon_reject
+    id: a0f6e520-3826-49c0-aad2-9f249438de2b
+    data_type: VARCHAR
+    external_column: upon_reject
+  - name: sys_updated_on
+    id: cb08a5c9-729a-40d7-9452-c057a0761923
+    data_type: DATE_TIME
+    external_column: sys_updated_on
+  - name: task_effective_number
+    id: fc42dd1f-8af0-4044-9f75-e6ae00f5a150
+    data_type: VARCHAR
+    external_column: task_effective_number
+  - name: approval_history
+    id: 8e7170d6-3654-437c-bfa7-5bbe5777d6c2
+    data_type: VARCHAR
+    external_column: approval_history
+  - name: skills
+    id: ace4c4df-dac1-4c65-afa4-24dbf58e5f3c
+    data_type: VARCHAR
+    external_column: skills
+  - name: number
+    id: 501b86d8-82d5-4245-8a7e-81e5bd16e5c6
+    data_type: VARCHAR
+    external_column: number
+  - name: sys_updated_by
+    id: 2bccf4ce-13ad-4ce0-953b-6fb51bc68545
+    data_type: VARCHAR
+    external_column: sys_updated_by
+  - name: opened_by
+    id: 89452916-ab43-4368-9a03-09891e1a5c00
+    data_type: VARCHAR
+    external_column: opened_by
+  - name: user_input
+    id: 644c58d6-fb29-4fc2-80f0-95c54eb25ebc
+    data_type: VARCHAR
+    external_column: user_input
+  - name: sys_created_on
+    id: 0dadeb71-7341-4741-b9f1-f9e8ee0d8ec3
+    data_type: DATE_TIME
+    external_column: sys_created_on
+  - name: sys_domain
+    id: 8ab3f68f-79b5-4c42-8024-c6a811e1ff9a
+    data_type: VARCHAR
+    external_column: sys_domain
+  - name: state
+    id: eaeba02c-fcef-4bf8-8a42-3f41860da783
+    data_type: VARCHAR
+    external_column: state
+  - name: route_reason
+    id: c0ac0541-9b27-470f-b167-65d359feb80f
+    data_type: VARCHAR
+    external_column: route_reason
+  - name: sys_created_by
+    id: 0bc30251-00d1-40cc-9a6a-25058d818f17
+    data_type: VARCHAR
+    external_column: sys_created_by
+  - name: knowledge
+    id: 9a498ccd-99d2-4f3a-9f12-64c230fad16f
+    data_type: VARCHAR
+    external_column: knowledge
+  - name: order
+    id: ed764ba2-c329-425a-9b4b-1fb62b3898b2
+    data_type: VARCHAR
+    external_column: order
+  - name: __status
+    id: 50f6c71a-9efb-48fa-b9a7-c25cab92aa0d
+    data_type: VARCHAR
+    external_column: __status
+  - name: closed_at
+    id: b34fa7fd-fbf0-4ad9-a054-4d9c556c3c88
+    data_type: DATE_TIME
+    external_column: closed_at
+  - name: cmdb_ci
+    id: ec167ed3-d1eb-4bfe-90c9-47bdf1bd5069
+    data_type: VARCHAR
+    external_column: cmdb_ci
+  - name: delivery_plan
+    id: 35293b1a-a91e-4389-bf31-465c14b3b2f9
+    data_type: VARCHAR
+    external_column: delivery_plan
+  - name: contract
+    id: 00af24c1-89e9-4562-88cc-dc1ea88ffd15
+    data_type: VARCHAR
+    external_column: contract
+  - name: impact
+    id: a9808a4f-1ed0-48b5-b8de-ebbab12c2942
+    data_type: VARCHAR
+    external_column: impact
+  - name: active
+    id: 9e29939d-b23d-4ac1-9369-df14db96b163
+    data_type: VARCHAR
+    external_column: active
+  - name: work_notes_list
+    id: 3770d0e3-c514-477f-94a0-61f16804b069
+    data_type: VARCHAR
+    external_column: work_notes_list
+  - name: business_service
+    id: df33b7ea-9d97-415e-beeb-68a5fd8bec0b
+    data_type: VARCHAR
+    external_column: business_service
+  - name: priority
+    id: 21bb03d2-23d2-49e3-95df-b303dc539a22
+    data_type: VARCHAR
+    external_column: priority
+  - name: sys_domain_path
+    id: 72b0f0af-442f-4c8a-98b3-d298f9b174ed
+    data_type: VARCHAR
+    external_column: sys_domain_path
+  - name: time_worked
+    id: c2908fd2-2693-4c3c-980a-337e85519d95
+    data_type: VARCHAR
+    external_column: time_worked
+  - name: expected_start
+    id: b740ae3f-5f62-44a0-97ba-1c8b1a6932b1
+    data_type: DATE_TIME
+    external_column: expected_start
+  - name: opened_at
+    id: 0ba6d681-3c99-43b5-a43b-caf95c35b331
+    data_type: DATE_TIME
+    external_column: opened_at
+  - name: business_duration
+    id: de76e240-c046-4296-aeda-d782951afa33
+    data_type: DATE
+    external_column: business_duration
+  - name: group_list
+    id: 353e0b90-27b0-4061-b153-470a142d4644
+    data_type: VARCHAR
+    external_column: group_list
+  - name: work_end
+    id: b516c2c3-e23d-4c53-8e00-88d954d23cb0
+    data_type: DATE_TIME
+    external_column: work_end
+  - name: approval_set
+    id: a6344743-2e8d-408f-a3d6-984b045d324c
+    data_type: DATE_TIME
+    external_column: approval_set
+  - name: work_notes
+    id: 5d812bd0-23c0-4648-8fbd-1dba1c98af53
+    data_type: VARCHAR
+    external_column: work_notes
+  - name: universal_request
+    id: d4661413-035c-4a6c-8d15-0eaecd52f36a
+    data_type: VARCHAR
+    external_column: universal_request
+  - name: short_description
+    id: 6c771a07-7d85-4563-8ffc-c58f8de22ac2
+    data_type: VARCHAR
+    external_column: short_description
+  - name: correlation_display
+    id: f08a6675-7f68-4db2-8935-0d101e94f1f6
+    data_type: VARCHAR
+    external_column: correlation_display
+  - name: delivery_task
+    id: 4db192a3-726f-4e54-8217-4a3ae44f7b17
+    data_type: VARCHAR
+    external_column: delivery_task
+  - name: work_start
+    id: 2ea0319f-23fa-4642-8bcb-d463250f189c
+    data_type: DATE_TIME
+    external_column: work_start
+  - name: assignment_group
+    id: a7627f52-1b96-4402-ac91-7a9344f6a85f
+    data_type: VARCHAR
+    external_column: assignment_group
+  - name: additional_assignee_list
+    id: 3572bc84-612c-4011-8135-72b839505264
+    data_type: VARCHAR
+    external_column: additional_assignee_list
+  - name: description
+    id: f14f1937-7f87-4ea6-b244-2c03984935ce
+    data_type: VARCHAR
+    external_column: description
+  - name: calendar_duration
+    id: e016f9ef-e286-400b-acc3-ec310cd88db9
+    data_type: DATE_TIME
+    external_column: calendar_duration
+  - name: close_notes
+    id: 57e3829f-e90e-42af-93d1-64606d31610a
+    data_type: VARCHAR
+    external_column: close_notes
+  - name: service_offering
+    id: 13f83c44-bd85-4684-9e5d-ef48f9f01397
+    data_type: VARCHAR
+    external_column: service_offering
+  - name: sys_class_name
+    id: f73f260c-0b52-4e4a-81be-ae793378cf02
+    data_type: VARCHAR
+    external_column: sys_class_name
+  - name: closed_by
+    id: c0579379-bb20-4635-89a0-525d18cacae1
+    data_type: VARCHAR
+    external_column: closed_by
+  - name: follow_up
+    id: b549b350-e410-414f-853a-c27e101eea80
+    data_type: VARCHAR
+    external_column: follow_up
+  - name: sys_id
+    id: a4e1bd9b-2f12-487e-8bf3-e320a4fefa02
+    data_type: VARCHAR
+    external_column: sys_id
+  - name: contact_type
+    id: 4e9ed2dd-2a53-4f13-8777-c97957d97bb2
+    data_type: VARCHAR
+    external_column: contact_type
+  - name: urgency
+    id: b5ab7ab4-3d90-4b0d-aec9-7259147e85cc
+    data_type: VARCHAR
+    external_column: urgency
+  - name: company
+    id: 63b35804-06e7-4c0f-88f8-3d149bd0ef0c
+    data_type: VARCHAR
+    external_column: company
+  - name: reassignment_count
+    id: 009d00b0-c27e-4899-8c24-7201b434f9a7
+    data_type: VARCHAR
+    external_column: reassignment_count
+  - name: activity_due
+    id: 60f0ea00-62df-4a11-a6e0-a85947c697ee
+    data_type: DATE_TIME
+    external_column: activity_due
+  - name: assigned_to
+    id: 72ee4c42-3ff3-4187-8f9f-c9998ef952e9
+    data_type: VARCHAR
+    external_column: assigned_to
+  - name: comments
+    id: f981696b-a259-4c28-abee-4a46a9b40ac8
+    data_type: VARCHAR
+    external_column: comments
+  - name: approval
+    id: b33a0926-d885-404a-8174-96798eb63f4f
+    data_type: VARCHAR
+    external_column: approval
+  - name: sla_due
+    id: d5ecde4c-79ca-4151-8dae-18b50548f009
+    data_type: DATE_TIME
+    external_column: sla_due
+  - name: comments_and_work_notes
+    id: 27ccb7d8-ca02-4f57-9cce-e36616e2e8dc
+    data_type: VARCHAR
+    external_column: comments_and_work_notes
+  - name: due_date
+    id: 6143eb8c-c4e6-43b8-991b-d657ed3999a8
+    data_type: DATE_TIME
+    external_column: due_date
+  - name: sys_mod_count
+    id: 88414b99-eef8-43de-985c-3cacdd1ca921
+    data_type: VARCHAR
+    external_column: sys_mod_count
+  - name: sys_tags
+    id: eeac7607-ff16-4fdc-b81f-168ee07b6dd2
+    data_type: VARCHAR
+    external_column: sys_tags
+  - name: escalation
+    id: 588c7061-6784-4d28-9dbe-5e25d2150eca
+    data_type: VARCHAR
+    external_column: escalation
+  - name: upon_approval
+    id: ad1727cc-73de-4356-b582-73d05a146f72
+    data_type: VARCHAR
+    external_column: upon_approval
+  - name: correlation_id
+    id: 46114bd1-e9da-4938-9a84-a6692ce1c329
+    data_type: VARCHAR
+    external_column: correlation_id
+  - name: location
+    id: c2e29a7b-35cf-4c3f-892e-99a4da920cb5
+    data_type: VARCHAR
+    external_column: location
+- name: snow_sys_user_group
+  id: 801e7124-fb61-4ac9-b09f-7214b075cf2e
+  external_table:
+    db_name: SPOTAPPS_DB
+    schema_name: SERVICENOW
+    table_name: snow_sys_user_group
+  column:
+  - name: _id
+    id: 701ee33c-dfa9-4479-8250-bb6571615301
+    data_type: VARCHAR
+    external_column: _id
+  - name: parent
+    id: fe403e6b-c064-4822-81fa-3aa3333df19c
+    data_type: VARCHAR
+    external_column: parent
+  - name: manager
+    id: 2db3f99a-fb90-49df-9c86-9c32514903ae
+    data_type: VARCHAR
+    external_column: manager
+  - name: roles
+    id: ed0c24f0-a853-4411-8342-aae406bf7bba
+    data_type: VARCHAR
+    external_column: roles
+  - name: sys_mod_count
+    id: bb02d770-d2ab-4ea5-82ef-5063eed802cf
+    data_type: VARCHAR
+    external_column: sys_mod_count
+  - name: active
+    id: f9e424f6-c7ac-4df2-af7e-37a9800dfd29
+    data_type: VARCHAR
+    external_column: active
+  - name: description
+    id: c62fc9ef-c0cd-4bbc-b18b-c7fb566309e5
+    data_type: VARCHAR
+    external_column: description
+  - name: source
+    id: f6b0619f-d5ec-46af-9c97-353038da8c10
+    data_type: VARCHAR
+    external_column: source
+  - name: sys_updated_on
+    id: e60bce5b-66d3-4a93-bb8e-8387d5df8450
+    data_type: DATE_TIME
+    external_column: sys_updated_on
+  - name: sys_tags
+    id: 1ca9cf08-922f-47d4-8b19-945b3961cfdf
+    data_type: VARCHAR
+    external_column: sys_tags
+  - name: type
+    id: c6decab6-c1a3-4d2b-aec8-e3c89628d226
+    data_type: VARCHAR
+    external_column: type
+  - name: sys_id
+    id: 60f576d7-2f41-4bf1-bd61-d45ce0c7ca5e
+    data_type: VARCHAR
+    external_column: sys_id
+  - name: sys_updated_by
+    id: d78f19e9-1d79-44cc-be59-f17e070890a6
+    data_type: VARCHAR
+    external_column: sys_updated_by
+  - name: cost_center
+    id: a4f6d8b3-b8bf-4b9e-b0ac-02dfe890e21a
+    data_type: VARCHAR
+    external_column: cost_center
+  - name: default_assignee
+    id: 550c3430-7035-4fe0-abf9-c6cb28debd21
+    data_type: VARCHAR
+    external_column: default_assignee
+  - name: sys_created_on
+    id: fae68674-0637-47ba-ba7a-2e4e5abafbdf
+    data_type: DATE_TIME
+    external_column: sys_created_on
+  - name: name
+    id: 1eb99827-a8fe-446d-af17-178b529130ae
+    data_type: VARCHAR
+    external_column: name
+  - name: exclude_manager
+    id: 2ed415c3-38fd-423d-b2bf-733973609e89
+    data_type: VARCHAR
+    external_column: exclude_manager
+  - name: email
+    id: 1c70119b-d219-4a9c-b6f4-e6d22891d8c9
+    data_type: VARCHAR
+    external_column: email
+  - name: include_members
+    id: bd8d6640-d752-4043-a910-85974781c310
+    data_type: VARCHAR
+    external_column: include_members
+  - name: sys_created_by
+    id: 10625c22-cc26-4d07-8144-e4097cbe2fdf
+    data_type: VARCHAR
+    external_column: sys_created_by
+  - name: __status
+    id: 1f9e8ef2-c973-4a30-b5e8-2799e25c4653
+    data_type: VARCHAR
+    external_column: __status
+- name: snow_core_company
+  id: 08c104cd-81ba-4f93-9d50-dd3bfe9e9b36
+  external_table:
+    db_name: SPOTAPPS_DB
+    schema_name: SERVICENOW
+    table_name: snow_core_company
+  column:
+  - name: _id
+    id: 15a18cb2-1aa7-493c-b4f3-cde498a78334
+    data_type: VARCHAR
+    external_column: _id
+  - name: banner_image_light
+    id: 3b8f6cc6-3d74-4353-8cdb-d7382979e5c9
+    data_type: VARCHAR
+    external_column: banner_image_light
+  - name: country
+    id: 8f426bf0-9759-45a7-842c-385c5b449481
+    data_type: VARCHAR
+    external_column: country
+  - name: parent
+    id: ab4ee39c-f328-45c8-8033-07ebc009f507
+    data_type: VARCHAR
+    external_column: parent
+  - name: notes
+    id: bb1f8370-3d13-44d0-ab0d-8316ec4c1efd
+    data_type: VARCHAR
+    external_column: notes
+  - name: city
+    id: cae7f1c1-a66d-4b72-845d-aed16a2cf651
+    data_type: VARCHAR
+    external_column: city
+  - name: stock_symbol
+    id: 9624ea40-ce49-4841-afdf-5f0b9a487a3c
+    data_type: VARCHAR
+    external_column: stock_symbol
+  - name: latitude
+    id: 3f6717fe-6936-4954-8018-1a67b50ae8f1
+    data_type: VARCHAR
+    external_column: latitude
+  - name: discount
+    id: ee1d3eef-dec4-4bb0-b69e-898816af5d06
+    data_type: VARCHAR
+    external_column: discount
+  - name: sys_updated_on
+    id: 3f0f704c-b6d0-4c50-972f-c72efe7a3aa2
+    data_type: DATE_TIME
+    external_column: sys_updated_on
+  - name: sys_class_name
+    id: 81ac7e2c-787c-4a85-a68a-7b4b5d5b92d8
+    data_type: VARCHAR
+    external_column: sys_class_name
+  - name: manufacturer
+    id: 13bbf288-8f23-4e02-9bfa-85fa2337dd28
+    data_type: VARCHAR
+    external_column: manufacturer
+  - name: apple_icon
+    id: 21e589d2-72f1-428a-bb77-319f80f9b6a8
+    data_type: VARCHAR
+    external_column: apple_icon
+  - name: sys_id
+    id: ed8923cf-a34b-4ea6-a9a5-84443568aed1
+    data_type: VARCHAR
+    external_column: sys_id
+  - name: market_cap
+    id: a25171bc-bbd1-4c09-8cdf-46252d109e30
+    data_type: VARCHAR
+    external_column: market_cap
+  - name: sys_updated_by
+    id: c78aa5ee-4c11-47d9-8bd3-513dd1008279
+    data_type: VARCHAR
+    external_column: sys_updated_by
+  - name: num_employees
+    id: 58edd132-4fff-4a7c-a35e-2eeb3907a9b4
+    data_type: VARCHAR
+    external_column: num_employees
+  - name: fiscal_year
+    id: 58a5c6ea-ae21-4e39-b8d8-ef49bf3fb177
+    data_type: VARCHAR
+    external_column: fiscal_year
+  - name: rank_tier
+    id: b5eb2b03-1d26-49a6-9be5-892ad16fc241
+    data_type: VARCHAR
+    external_column: rank_tier
+  - name: street
+    id: a9e6c372-d8c0-4579-aed7-d6e292a636c4
+    data_type: VARCHAR
+    external_column: street
+  - name: sys_created_on
+    id: 3f7668c2-66db-488b-af75-bc8f804a5fc8
+    data_type: DATE_TIME
+    external_column: sys_created_on
+  - name: vendor
+    id: 692d4475-87d6-4cc2-8e42-13a53221136d
+    data_type: VARCHAR
+    external_column: vendor
+  - name: contact
+    id: a75b9861-0abd-43ea-9621-2b15544e23f2
+    data_type: VARCHAR
+    external_column: contact
+  - name: lat_long_error
+    id: 871848a7-5ee8-4c07-8c70-aae708392a0e
+    data_type: VARCHAR
+    external_column: lat_long_error
+  - name: stock_price
+    id: 69453fbb-fa4f-4b03-bd6d-537a2fbfbec5
+    data_type: VARCHAR
+    external_column: stock_price
+  - name: theme
+    id: 0b5d42bc-afe9-49c8-95c9-0e6442a4552c
+    data_type: VARCHAR
+    external_column: theme
+  - name: banner_image
+    id: 5b80bc6e-9577-4353-a505-cc5485c86049
+    data_type: VARCHAR
+    external_column: banner_image
+  - name: state
+    id: f56aef3a-9d24-41f6-b618-219d641c2e19
+    data_type: VARCHAR
+    external_column: state
+  - name: sys_created_by
+    id: 83e03272-a6e0-4dd5-99f0-2cd76f1b3e75
+    data_type: VARCHAR
+    external_column: sys_created_by
+  - name: longitude
+    id: 2ef7a7c5-acff-49fd-bc8e-885a701e6eab
+    data_type: VARCHAR
+    external_column: longitude
+  - name: vendor_type
+    id: b25682e5-234b-41ec-91c2-2705ecb3ebcb
+    data_type: VARCHAR
+    external_column: vendor_type
+  - name: __status
+    id: ceb8788e-762e-44aa-9071-e3ccc907267e
+    data_type: VARCHAR
+    external_column: __status
+  - name: zip
+    id: 6ae0bc2e-42e6-4f3e-9131-c19cb24f21a3
+    data_type: VARCHAR
+    external_column: zip
+  - name: profits
+    id: 5ea2e9e3-5c49-4734-8233-e31adccfd19a
+    data_type: VARCHAR
+    external_column: profits
+  - name: revenue_per_year
+    id: 85fcbda6-bc59-49cc-a600-d3d1a1e2b37f
+    data_type: VARCHAR
+    external_column: revenue_per_year
+  - name: website
+    id: ccdb01dd-3fe2-424c-944d-3160fd782b8b
+    data_type: VARCHAR
+    external_column: website
+  - name: publicly_traded
+    id: b9782a59-874e-4ce0-b858-ae715667a4f1
+    data_type: VARCHAR
+    external_column: publicly_traded
+  - name: sys_mod_count
+    id: 057a2383-0e89-4969-b506-9782bf9518d9
+    data_type: VARCHAR
+    external_column: sys_mod_count
+  - name: sys_tags
+    id: c8c7a431-7cbe-490f-877d-ceba14e0abc6
+    data_type: VARCHAR
+    external_column: sys_tags
+  - name: fax_phone
+    id: 9e197910-14da-425e-9d73-f90c15808c92
+    data_type: VARCHAR
+    external_column: fax_phone
+  - name: phone
+    id: 3b7ff3d9-3c3a-44e1-90f7-844bca24fbc4
+    data_type: VARCHAR
+    external_column: phone
+  - name: vendor_manager
+    id: 33ff5557-bff0-45b5-b7b6-a655b535ce57
+    data_type: VARCHAR
+    external_column: vendor_manager
+  - name: banner_text
+    id: c99e598c-9db9-448e-bf70-f0ac9f51fb6d
+    data_type: VARCHAR
+    external_column: banner_text
+  - name: name
+    id: aca5bc89-e8d9-4c31-92d7-9562343fe3ca
+    data_type: VARCHAR
+    external_column: name
+  - name: coordinates_retrieved_on
+    id: 82281c97-58e0-4a2b-be2b-84c104788399
+    data_type: VARCHAR
+    external_column: coordinates_retrieved_on
+  - name: customer
+    id: acee1a58-1d30-493b-9110-93a3fcebdecc
+    data_type: VARCHAR
+    external_column: customer
+  - name: primary
+    id: 33b242d2-f171-41b6-b2d8-21d913eaf745
+    data_type: VARCHAR
+    external_column: primary
+- name: snow_sys_user
+  id: 2bc46196-76fe-4218-9f7b-57537ce49c85
+  external_table:
+    db_name: SPOTAPPS_DB
+    schema_name: SERVICENOW
+    table_name: snow_sys_user
+  column:
+  - name: _id
+    id: ac14f1da-0313-48fd-920f-0d59d83880e6
+    data_type: VARCHAR
+    external_column: _id
+  - name: calendar_integration
+    id: e171f7cd-d6d0-4d30-8e78-ac5757de89c1
+    data_type: VARCHAR
+    external_column: calendar_integration
+  - name: country
+    id: daeab161-a0cd-4651-8778-9463032baaa7
+    data_type: VARCHAR
+    external_column: country
+  - name: user_password
+    id: 0aa7c2a0-3b0f-4825-9d14-c6e3ad76d187
+    data_type: VARCHAR
+    external_column: user_password
+  - name: last_login_time
+    id: 3f37af94-d1ba-4a70-a29b-875eaf47ed5d
+    data_type: DATE_TIME
+    external_column: last_login_time
+  - name: source
+    id: 96017cbe-97c9-4c77-ac3c-219378f7ab85
+    data_type: VARCHAR
+    external_column: source
+  - name: sys_updated_on
+    id: 5aa01b8e-daac-405c-80cc-0c47384300a1
+    data_type: DATE_TIME
+    external_column: sys_updated_on
+  - name: building
+    id: 0da2b5ff-788c-40fd-9b6e-6aac3948fc68
+    data_type: VARCHAR
+    external_column: building
+  - name: web_service_access_only
+    id: c74c8dd1-79ea-4cf0-9afa-cdeeadd15985
+    data_type: VARCHAR
+    external_column: web_service_access_only
+  - name: notification
+    id: 84332a69-3916-49c9-bf2d-a6bbab8206e4
+    data_type: VARCHAR
+    external_column: notification
+  - name: enable_multifactor_authn
+    id: e7116910-8f20-41c1-abc6-1f99889c8319
+    data_type: VARCHAR
+    external_column: enable_multifactor_authn
+  - name: sys_updated_by
+    id: 295dd05d-e455-4e59-8dc8-0e0707432113
+    data_type: VARCHAR
+    external_column: sys_updated_by
+  - name: sys_created_on
+    id: ef741af3-f213-4388-bbcc-070828f2aa29
+    data_type: DATE_TIME
+    external_column: sys_created_on
+  - name: sys_domain
+    id: 756714db-0f6c-418e-ad7a-9028e412e1e5
+    data_type: VARCHAR
+    external_column: sys_domain
+  - name: state
+    id: 14a87de0-e114-4274-9a49-17d19b33ca12
+    data_type: VARCHAR
+    external_column: state
+  - name: vip
+    id: 86c1e096-83f7-4baf-a100-43596fca079d
+    data_type: VARCHAR
+    external_column: vip
+  - name: sys_created_by
+    id: 311370b8-57ee-4157-b706-c06893e680b1
+    data_type: VARCHAR
+    external_column: sys_created_by
+  - name: __status
+    id: d315415a-2312-4799-b18e-a63d00e7d270
+    data_type: VARCHAR
+    external_column: __status
+  - name: zip
+    id: e0e8c80c-11f7-4410-ad1c-0f2367537eae
+    data_type: VARCHAR
+    external_column: zip
+  - name: home_phone
+    id: 4b887c1a-00e6-4452-9541-c2690d0d09e4
+    data_type: VARCHAR
+    external_column: home_phone
+  - name: time_format
+    id: 24b9a4d1-8c5d-4904-9798-87867b0a7ad1
+    data_type: VARCHAR
+    external_column: time_format
+  - name: last_login
+    id: 185cef94-af2e-44fb-9ace-93626fdfc0ab
+    data_type: DATE
+    external_column: last_login
+  - name: default_perspective
+    id: 57e73a01-d3fe-49f0-9bcb-9539fcb47109
+    data_type: VARCHAR
+    external_column: default_perspective
+  - name: active
+    id: a14d01b0-ee71-42b9-b21b-c06bc7b4d53d
+    data_type: VARCHAR
+    external_column: active
+  - name: sys_domain_path
+    id: fff70e62-80aa-491f-b896-7183e5e7c7df
+    data_type: VARCHAR
+    external_column: sys_domain_path
+  - name: cost_center
+    id: aeb12ae8-561e-4853-a015-69ad99316f87
+    data_type: VARCHAR
+    external_column: cost_center
+  - name: phone
+    id: 8879ffce-fa1a-4154-b8de-786236979f02
+    data_type: VARCHAR
+    external_column: phone
+  - name: name
+    id: b0341a2d-df1c-496f-81d3-14489ed3071c
+    data_type: VARCHAR
+    external_column: name
+  - name: employee_number
+    id: 8a41a8dd-d153-499c-b0c9-279acdc06e1d
+    data_type: VARCHAR
+    external_column: employee_number
+  - name: password_needs_reset
+    id: 03f37b1d-2e9f-408c-b21d-74091c94005d
+    data_type: VARCHAR
+    external_column: password_needs_reset
+  - name: gender
+    id: 1a469564-3a1a-4bb2-80a3-3c5e5433348a
+    data_type: VARCHAR
+    external_column: gender
+  - name: city
+    id: e0f06a06-6dd3-452d-89b1-047820c6d421
+    data_type: VARCHAR
+    external_column: city
+  - name: failed_attempts
+    id: 64ef69a4-e7f9-427a-9d07-fb53c81416ef
+    data_type: VARCHAR
+    external_column: failed_attempts
+  - name: user_name
+    id: aec7ee08-03e5-421c-8b0a-9c80b6db6240
+    data_type: VARCHAR
+    external_column: user_name
+  - name: roles
+    id: b4051eaf-0311-45bb-bda7-28116303738a
+    data_type: VARCHAR
+    external_column: roles
+  - name: title
+    id: 1a58454e-43ab-42cb-9e3d-443e3d5bc3e6
+    data_type: VARCHAR
+    external_column: title
+  - name: sys_class_name
+    id: 5f114604-b6da-4c7c-8f62-1ece04ea8fc8
+    data_type: VARCHAR
+    external_column: sys_class_name
+  - name: sys_id
+    id: 49575f5f-9d02-4e47-8b71-69a313e35303
+    data_type: VARCHAR
+    external_column: sys_id
+  - name: internal_integration_user
+    id: c4cfeab5-5c9c-4a47-9896-514b72a3526b
+    data_type: VARCHAR
+    external_column: internal_integration_user
+  - name: ldap_server
+    id: 8c16bf4d-ddf9-434e-abfb-ef8d3df929c4
+    data_type: VARCHAR
+    external_column: ldap_server
+  - name: mobile_phone
+    id: fb96bce5-73c4-4c46-bed5-c1fff2a5bf2c
+    data_type: VARCHAR
+    external_column: mobile_phone
+  - name: street
+    id: 0e233eb1-6e47-43e7-b96c-1fb2baa8eab9
+    data_type: VARCHAR
+    external_column: street
+  - name: company
+    id: c9e527dc-e1d5-4080-8091-20e3195a8ca3
+    data_type: VARCHAR
+    external_column: company
+  - name: department
+    id: 395dc4c8-38bf-4086-968c-70cbb8659dd7
+    data_type: VARCHAR
+    external_column: department
+  - name: first_name
+    id: c5a7c2bb-0281-44c8-9207-b7d9350c3094
+    data_type: VARCHAR
+    external_column: first_name
+  - name: email
+    id: 3e26e8b2-51d6-496e-8b73-be1b3726bb44
+    data_type: VARCHAR
+    external_column: email
+  - name: introduction
+    id: 1a5a8590-8811-4622-9a6a-c00c8e9f6a47
+    data_type: VARCHAR
+    external_column: introduction
+  - name: preferred_language
+    id: 433d6b07-92d6-40f3-b14c-9c799ad5a869
+    data_type: VARCHAR
+    external_column: preferred_language
+  - name: manager
+    id: 78e9f1ba-e14d-46e6-b847-5f2d6b111fed
+    data_type: VARCHAR
+    external_column: manager
+  - name: locked_out
+    id: c067018f-6290-498c-a347-d3aa5a22ae92
+    data_type: VARCHAR
+    external_column: locked_out
+  - name: sys_mod_count
+    id: 56335471-9901-4cab-837f-8da0dc57da0b
+    data_type: VARCHAR
+    external_column: sys_mod_count
+  - name: last_name
+    id: 11011393-f085-4155-9800-f1b501a42a44
+    data_type: VARCHAR
+    external_column: last_name
+  - name: photo
+    id: e0cce02e-5f04-42d7-8576-fa2aa59db965
+    data_type: VARCHAR
+    external_column: photo
+  - name: avatar
+    id: a1f6218d-1892-4e50-bd67-fe562a30ebb2
+    data_type: VARCHAR
+    external_column: avatar
+  - name: middle_name
+    id: e3c6581e-64ce-4dab-9411-7877af59ab8b
+    data_type: VARCHAR
+    external_column: middle_name
+  - name: sys_tags
+    id: f9c68392-4011-468a-a18a-5fd9d10d2c1a
+    data_type: VARCHAR
+    external_column: sys_tags
+  - name: time_zone
+    id: 6d916b6c-9767-4370-bb2c-67a81ae9b161
+    data_type: VARCHAR
+    external_column: time_zone
+  - name: schedule
+    id: 422cc86c-e03c-42a5-b6ea-f46bfd235066
+    data_type: VARCHAR
+    external_column: schedule
+  - name: date_format
+    id: ef2bc208-47b0-47ee-ab14-f63b44c2dcbb
+    data_type: VARCHAR
+    external_column: date_format
+  - name: location
+    id: 5c2aab01-570c-4277-8492-979efba0edbd
+    data_type: VARCHAR
+    external_column: location
+- name: servicenow_problem
+  id: 1d711a83-2dc8-4731-9652-86311ce48dd1
+  external_table:
+    db_name: SPOTAPPS_DB
+    schema_name: SERVICENOW
+    table_name: servicenow_problem
+  column:
+  - name: _id
+    id: 1e633e6d-05f6-48b1-8eb0-aeb64860855f
+    data_type: VARCHAR
+    external_column: _id
+  - name: sys_id
+    id: a3bd9119-a078-4616-9861-e386d5406176
+    data_type: VARCHAR
+    external_column: sys_id
+  - name: first_reported_by_task
+    id: 980d1cc7-7418-468c-9c32-4ee85782999f
+    data_type: VARCHAR
+    external_column: first_reported_by_task
+  - name: parent
+    id: a6db1e84-0989-4cac-a435-78a5ae260d93
+    data_type: VARCHAR
+    external_column: parent
+  - name: fix_communicated_by
+    id: c75ad9c5-7b2e-4c4f-a867-f5863eabb31d
+    data_type: VARCHAR
+    external_column: fix_communicated_by
+  - name: cause_notes
+    id: 4259d83d-0602-49b1-81fd-8653e6c4c136
+    data_type: VARCHAR
+    external_column: cause_notes
+  - name: resolved_by
+    id: 85d04660-2004-481f-a7fa-2e5f5e7308b3
+    data_type: VARCHAR
+    external_column: resolved_by
+  - name: major_problem
+    id: 90176e8c-93e2-427d-93c0-cb2f52a598fb
+    data_type: VARCHAR
+    external_column: major_problem
+  - name: rfc
+    id: 3f55b283-6be4-4929-bb60-8c8ebfe7ba7d
+    data_type: VARCHAR
+    external_column: rfc
+  - name: resolved_at
+    id: 539cd78d-b8ea-4816-90a6-d8aeb56f9fe8
+    data_type: VARCHAR
+    external_column: resolved_at
+  - name: subcategory
+    id: 8c1d82a9-7950-496d-a3d9-bce45744e08e
+    data_type: VARCHAR
+    external_column: subcategory
+  - name: reopened_at
+    id: 1c9d38b9-3c78-4198-b4d8-1bf4313d7114
+    data_type: VARCHAR
+    external_column: reopened_at
+  - name: known_error
+    id: 5776696b-34e1-41f7-8aab-7775dfcf7f78
+    data_type: VARCHAR
+    external_column: known_error
+  - name: workaround
+    id: 97071737-8de1-4fb1-a53a-8d81a911da4e
+    data_type: VARCHAR
+    external_column: workaround
+  - name: reopened_by
+    id: 22b38e32-133b-41e1-a7f2-02c3bbf13d97
+    data_type: VARCHAR
+    external_column: reopened_by
+  - name: res_code
+    id: be00641b-7e1a-499b-aeed-558be1f45a57
+    data_type: VARCHAR
+    external_column: res_code
+  - name: confirmed_at
+    id: 5d58e2ec-01b5-4e9c-a407-2e37a7749be9
+    data_type: DATE_TIME
+    external_column: confirmed_at
+  - name: related_incidents
+    id: 8d144254-7e70-474a-8438-2e91cb2f4c51
+    data_type: VARCHAR
+    external_column: related_incidents
+  - name: workaround_communicated_by
+    id: ad1c4594-4122-4fd6-8899-1b0b8b27679f
+    data_type: VARCHAR
+    external_column: workaround_communicated_by
+  - name: review_outcome
+    id: 1a96ba19-cddd-436d-94d0-c0c3cc5bce5b
+    data_type: VARCHAR
+    external_column: review_outcome
+  - name: fix_communicated_at
+    id: df8a6d18-b20f-4e81-b7dd-b4ef88035cb1
+    data_type: VARCHAR
+    external_column: fix_communicated_at
+  - name: problem_state
+    id: 727d5e51-86c7-44bb-b9a7-a9311cf4604e
+    data_type: VARCHAR
+    external_column: problem_state
+  - name: reopen_count
+    id: 13d65779-e6dc-40f3-abf7-466dc7206a76
+    data_type: VARCHAR
+    external_column: reopen_count
+  - name: duplicate_of
+    id: d1e24177-a8d1-4059-9341-d968c9e94aac
+    data_type: VARCHAR
+    external_column: duplicate_of
+  - name: confirmed_by
+    id: 5f03d837-3377-407d-a134-264175fbd889
+    data_type: VARCHAR
+    external_column: confirmed_by
+  - name: workaround_communicated_at
+    id: 6db007af-8838-411c-b5e5-812f44c0db35
+    data_type: VARCHAR
+    external_column: workaround_communicated_at
+  - name: category
+    id: 6ce9fabe-b639-450c-ba76-9cbb6199a56c
+    data_type: VARCHAR
+    external_column: category
+  - name: fix_notes
+    id: 977d8531-60d7-414b-bcbe-99ff3b579e5e
+    data_type: VARCHAR
+    external_column: fix_notes
+  - name: workaround_applied
+    id: 8d8c9434-e981-46a2-ba48-64acf5f201dd
+    data_type: VARCHAR
+    external_column: workaround_applied
+- name: snow_problem_task
+  id: 229badea-5ab7-4ac3-8bac-97b58c30365a
+  external_table:
+    db_name: SPOTAPPS_DB
+    schema_name: SERVICENOW
+    table_name: snow_problem_task
+  column:
+  - name: _id
+    id: 662f9ac6-c979-4b08-a7c3-f99f43b3511a
+    data_type: VARCHAR
+    external_column: _id
+  - name: problem_task_type
+    id: 3b13909b-31a1-4803-8edc-d7e265e72351
+    data_type: VARCHAR
+    external_column: problem_task_type
+  - name: cause_notes
+    id: bb44e86a-7d5c-49ad-a380-2a75be0f8704
+    data_type: VARCHAR
+    external_column: cause_notes
+  - name: task_effective_number
+    id: b340e561-2af1-47c3-8478-daa444480bfa
+    data_type: VARCHAR
+    external_column: task_effective_number
+  - name: problem
+    id: de5f4ae7-354d-4220-b5f0-31a56a8e0a41
+    data_type: VARCHAR
+    external_column: problem
+  - name: other_reason
+    id: 30c78de8-2e4a-40e9-9c1d-7ac078777d3f
+    data_type: VARCHAR
+    external_column: other_reason
+  - name: started_at
+    id: dd1cb36d-180a-4e07-b3eb-7134c004e97f
+    data_type: DATE_TIME
+    external_column: started_at
+  - name: reopened_at
+    id: 3fe50678-90e7-4032-9e92-59c91bfeea87
+    data_type: DATE_TIME
+    external_column: reopened_at
+  - name: close_code
+    id: ada9c2aa-ad75-4068-9329-98f2bde2eb25
+    data_type: VARCHAR
+    external_column: close_code
+  - name: workaround
+    id: ad242159-1daa-4374-b329-1fb626ae73de
+    data_type: VARCHAR
+    external_column: workaround
+  - name: reopened_by
+    id: d25937b9-25da-4d41-a01d-c792f78f0e73
+    data_type: VARCHAR
+    external_column: reopened_by
+  - name: vendor
+    id: 32305992-80e9-4b1e-8215-3cafd8682d80
+    data_type: VARCHAR
+    external_column: vendor
+  - name: started_by
+    id: 003020ee-2d19-4a15-b4bb-347888a23cd1
+    data_type: VARCHAR
+    external_column: started_by
+  - name: reopen_count
+    id: 523e45cd-b87c-423e-99b9-74117ff4823c
+    data_type: VARCHAR
+    external_column: reopen_count
+  - name: cause_code
+    id: a841bacc-74d5-4e5c-8f3e-de9c45c1d663
+    data_type: VARCHAR
+    external_column: cause_code
+  - name: fix_notes
+    id: 6e856512-2f84-4db0-b93d-41e9cf7d4fa2
+    data_type: VARCHAR
+    external_column: fix_notes
