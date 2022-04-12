@@ -1,0 +1,147 @@
+guid: a27c9fd4-20fc-46dc-b530-529864923c75
+worksheet:
+  name: Spotapps_Servicenow_Incident_Managment
+  tables:
+  - name: cmn_location
+  - name: core_company
+  - name: incident
+  - name: incident_task
+  - name: sys_user
+  - name: sys_user_group
+  - name: task
+  joins:
+  - name: incident_task_to_incident
+    source: incident_task
+    destination: incident
+    type: LEFT_OUTER
+    is_one_to_one: true
+  - name: task_to_sys_user_assigned_to
+    source: task
+    destination: sys_user
+    type: LEFT_OUTER
+    is_one_to_one: false
+  - name: task_to_sys_user_group
+    source: task
+    destination: sys_user_group
+    type: LEFT_OUTER
+    is_one_to_one: true
+  - name: task_to_cmn_location
+    source: task
+    destination: cmn_location
+    type: INNER
+    is_one_to_one: true
+  - name: task_to_core_company
+    source: task
+    destination: core_company
+    type: LEFT_OUTER
+    is_one_to_one: true
+  - name: task_to_incident_task
+    source: task
+    destination: incident_task
+    type: LEFT_OUTER
+    is_one_to_one: true
+  table_paths:
+  - id: cmn_location_1
+    table: cmn_location
+    join_path:
+    - join:
+      - task_to_cmn_location
+  - id: core_company_1
+    table: core_company
+    join_path:
+    - join:
+      - task_to_core_company
+  - id: incident_1
+    table: incident
+    join_path:
+    - join:
+      - task_to_incident_task
+      - incident_task_to_incident
+  - id: sys_user_1
+    table: sys_user
+    join_path:
+    - join:
+      - task_to_sys_user_assigned_to
+  - id: sys_user_group_1
+    table: sys_user_group
+    join_path:
+    - join:
+      - task_to_sys_user_group
+  - id: task_1
+    table: task
+    join_path:
+    - {}
+  worksheet_columns:
+  - name: Task Number
+    column_id: "task_1::number"
+    properties:
+      column_type: ATTRIBUTE
+  - name: Task Classification
+    column_id: "task_1::sys_class_name"
+    properties:
+      column_type: ATTRIBUTE
+  - name: Task Description
+    column_id: "task_1::short_description"
+    properties:
+      column_type: ATTRIBUTE
+  - name: Task Opened Date
+    column_id: "task_1::opened_at"
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Task Closed Date
+    column_id: "task_1::closed_at"
+    properties:
+      column_type: ATTRIBUTE
+      index_type: DONT_INDEX
+  - name: Task ID
+    column_id: "task_1::_id"
+    properties:
+      column_type: ATTRIBUTE
+  - name: Incident Category
+    column_id: "incident_1::category"
+    properties:
+      column_type: ATTRIBUTE
+  - name: Incident Task Number
+    column_id: "incident_1::task_effective_number"
+    properties:
+      column_type: ATTRIBUTE
+  - name: Incident Severity
+    column_id: "incident_1::severity"
+    properties:
+      column_type: ATTRIBUTE
+  - name: User Group Name
+    column_id: "sys_user_group_1::name"
+    properties:
+      column_type: ATTRIBUTE
+  - name: Country
+    column_id: "cmn_location_1::country"
+    properties:
+      column_type: ATTRIBUTE
+  - name: Company Name
+    column_id: "core_company_1::name"
+    properties:
+      column_type: ATTRIBUTE
+  - name: Task State
+    column_id: "task_1::state"
+    properties:
+      column_type: ATTRIBUTE
+  - name: Task Priority
+    column_id: "task_1::priority"
+    properties:
+      column_type: ATTRIBUTE
+  - name: Task Assigned
+    column_id: "task_1::assigned_to"
+    properties:
+      column_type: ATTRIBUTE
+  - name: assigned_Name
+    column_id: "sys_user_1::name"
+    properties:
+      column_type: ATTRIBUTE
+  - name: Incident Close code
+    column_id: "incident_1::close_code"
+    properties:
+      column_type: ATTRIBUTE
+  properties:
+    is_bypass_rls: false
+    join_progressive: true
